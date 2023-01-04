@@ -32,3 +32,26 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                              CUSTOM PROPERTIES                             */
+/* -------------------------------------------------------------------------- */
+:root {
+
+  /* Colors */
+  --primary-color: hsl(259, 56%, 49%);
+  --secondary-color: hsl(70, 100%, 47%);
+  --accent-color: hsl(6, 100%, 70%);
+  --text-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+
+  /* Font Familiy */
+  --heading-font: 'omnesmedium', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+}
