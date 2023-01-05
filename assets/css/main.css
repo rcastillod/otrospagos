@@ -46,12 +46,69 @@
   --white-color: hsl(0, 0%, 100%);
 
   /* Font Familiy */
-  --heading-font: 'omnesmedium', sans-serif;
-  --body-font: 'Roboto', sans-serif;
+  --body-font: 'omnesmedium', sans-serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  /* Font Sizes */
+  --fs-section-title: 2.875rem;
+  --fs-section-subtitle: 1.875rem;
+  --fs-section-paragraph: 1.125rem;
+  --fs-btn: 1.25rem;
 
   /* Font Weights */
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
 
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    RESET                                   */
+/* -------------------------------------------------------------------------- */
+
+body {
+  color: hsl(var(--primary-color));
+  font-family: var(--body-font);
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               UTILITY CLASSES                              */
+/* -------------------------------------------------------------------------- */
+
+.section-title {
+  font-size: var(--fs-section-title);
+  font-weight: var(--fw-bold);
+  letter-spacing: .325rem;
+  text-transform: uppercase;
+}
+
+.section-subtitle {
+  font-size: var(--fs-section-subtitle);
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid;
+  font-size: var(--fs-btn);
+  padding-block: .625em;
+  text-decoration: none;
+}
+
+.button.button-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.button.button-secondary {
+  border-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.button.button-accent {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
