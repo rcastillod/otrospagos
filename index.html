@@ -17,8 +17,9 @@
   <meta name="theme-color" content="#6336c2">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
@@ -26,38 +27,40 @@
   <header>
     <div class="header-wrapper py-4">
       <div class="container">
-        <div class="row justify-content-between">
+        <div class="row d-flex align-items-center justify-content-between">
 
           <!-- Logo -->
-          <a href="/" class="logo">
-            <img src="/assets/images/logo.svg" alt="Otros Pagos" width="150">
-          </a>
+          <div class="col-3">
+            <a href="/" class="logo">
+              <img src="/assets/images/logo.svg" alt="Otros Pagos" width="150">
+            </a>
+          </div>
 
-          <div>
+          <div class="col-9 d-flex column-gap-4 column-gap-md-5 align-items-center justify-content-md-end">
             <!-- Search form -->
             <form class="search-form" action="" role="search" method="post">
-              <label for="search-input">
+              <label class="d-none">
                 <span class="sr-only">Buscar</span>
               </label>
-              <input type="text" name="s" value="" placeholder="Buscar">
-              <a href="search-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.64 21.64">
-                  <g id="Capa_2" data-name="Capa 2">
-                    <g id="Capa_2-2" data-name="Capa 2">
-                      <circle class="cls-1" cx="8.72" cy="8.72" r="7.62" />
-                      <line class="cls-1" x1="14.11" y1="14.11" x2="20.54" y2="20.54" />
+              <div class="search-input">
+                <input type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
+                <a href="#" class="search-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.64 21.64">
+                    <g>
+                      <circle cx="8.72" cy="8.72" r="7.62" />
+                      <line x1="14.11" y1="14.11" x2="20.54" y2="20.54" />
                     </g>
-                  </g>
-                </svg>
-              </a>
+                  </svg>
+                </a>
+              </div>
             </form>
             <!-- Navigation -->
-            <nav class="header-nav">
-              <ul>
-                <li>
+            <nav class="header-nav d-none d-lg-block">
+              <ul class="nav d-flex">
+                <li class="nav-item">
                   <a href="#">Ayuda</a>
                 </li>
-                <li>
+                <li class="nav-item">
                   <a href="#">Empresas</a>
                 </li>
               </ul>
@@ -68,17 +71,21 @@
                 1
               </span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.39 27.36">
-                <g id="Capa_2" data-name="Capa 2">
-                  <g id="Capa_2-2" data-name="Capa 2">
-                    <circle class="cls-1" cx="3.16" cy="24.2" r="2.16" />
-                    <circle class="cls-1" cx="14.98" cy="24.2" r="2.16" />
-                    <polyline class="cls-1" points="19.89 2.79 16.91 19.64 1 19.64" />
-                    <path class="cls-1" d="M19.89,2.79A2.16,2.16,0,0,1,22.39,1" />
-                    <path class="cls-1" d="M19.11,7.2H1v6.22a1.23,1.23,0,0,0,1.06,1.21l15.4,1.93" />
-                  </g>
+                <g>
+                  <circle cx="3.16" cy="24.2" r="2.16" />
+                  <circle cx="14.98" cy="24.2" r="2.16" />
+                  <polyline points="19.89 2.79 16.91 19.64 1 19.64" />
+                  <path d="M19.89,2.79A2.16,2.16,0,0,1,22.39,1" />
+                  <path d="M19.11,7.2H1v6.22a1.23,1.23,0,0,0,1.06,1.21l15.4,1.93" />
                 </g>
               </svg>
             </a>
+            <!-- Mobile menu trigger -->
+            <div id="navTrigger" class="d-block d-lg-none nav-trigger">
+              <div class="trigger">
+                <div class="trigger-inner"></div>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -86,9 +93,48 @@
     </div>
   </header>
 
+  <!-- Mobile menu -->
+  <div class="overlay"></div>
+  <div id="mobileNav" class="mobile-nav">
+    <div id="closeTrigger" class="close-trigger d-flex justify-content-end">
+      <i class="fa-solid fa-xmark text-light"></i>
+    </div>
+    <div class="logo-mobile my-4">
+      <a href="/" class="logo">
+        <img src="/assets/images/logo-white.svg" alt="Otros Pagos" width="100">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav d-flex flex-column">
+        <li class="nav-item-mobile">
+          <a href="#">Ayuda</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="#">Empresas</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mt-5">
+      <p class="text-light text-center follow">Síguenos</p>
+      <nav>
+        <ul class="nav d-flex column-gap-3 justify-content-center social-nav">
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
   <!-- JS -->
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/scripts.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
