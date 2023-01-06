@@ -30,3 +30,29 @@ var swiper = new Swiper(".hero-slide", {
   },
   effect: "fade",
 });
+
+/* --------- Pagos carousel --------- */
+var swiper = new Swiper(".pagos-carousel", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 5,
+    },
+    1024: {
+      slidesPerView: 6,
+    },
+  },
+});
