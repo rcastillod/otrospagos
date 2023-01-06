@@ -19,3 +19,14 @@ const deactivateMenuPanel = () => {
 navTriggerOpen.addEventListener('click', activeMenuPanel)
 navTriggerClose.addEventListener('click', deactivateMenuPanel)
 mobilePanelOverlay.addEventListener('click', deactivateMenuPanel)
+
+/* ---------- Banner slider --------- */
+var swiper = new Swiper(".hero-slide", {
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+});
