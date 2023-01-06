@@ -5,32 +5,36 @@
   font-family: 'omnessemibolditalic';
   src: url('../fonts/omnes_semibolditalic-webfont.woff2') format('woff2'),
     url('../fonts/omnes_semibolditalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'omnesmediumitalic';
   src: url('../fonts/omnes_mediumitalic-webfont.woff2') format('woff2'),
     url('../fonts/omnes_mediumitalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap
 }
 
 @font-face {
   font-family: 'omnessemibold';
   src: url('../fonts/omnes_semibold-webfont.woff2') format('woff2'),
     url('../fonts/omnes_semibold-webfont.woff') format('woff');
-  font-weight: normal;
+  font-weight: 600;
   font-style: normal;
+  font-display: swap
 }
 
 @font-face {
   font-family: 'omnesmedium';
   src: url('../fonts/omnes_medium-webfont.woff2') format('woff2'),
     url('../fonts/omnes_medium-webfont.woff') format('woff');
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
+  font-display: swap
 }
 
 /* -------------------------------------------------------------------------- */
@@ -39,11 +43,14 @@
 :root {
 
   /* Colors */
-  --primary-color: hsl(259, 56%, 49%);
-  --secondary-color: hsl(70, 100%, 47%);
-  --accent-color: hsl(6, 100%, 70%);
-  --text-color: hsl(0, 0%, 0%);
-  --white-color: hsl(0, 0%, 100%);
+  --primary-color: 259 56% 49%;
+  --primary-color-tint: 259 54% 80%;
+  --secondary-color: 70 100% 47%;
+  --accent-color: 6 100% 70%;
+  --gradient-color-from: 261 54% 95%;
+  --gradient-color-to: 259 54% 87%;
+  --text-color: 0 0% 0%;
+  --white-color: 0 0% 100%;
 
   /* Font Familiy */
   --body-font: 'omnesmedium', sans-serif;
@@ -105,19 +112,19 @@ picture {
 }
 
 .button.button-primary {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-  color: var(--white-color);
+  background-color: hsl(var(--primary-color));
+  border-color: hsl(var(--primary-color));
+  color: hsl(var(--white-color));
 }
 
 .button.button-secondary {
-  border-color: var(--secondary-color);
-  color: var(--primary-color);
+  border-color: hsl(var(--secondary-color));
+  color: hsl(var(--primary-color));
 }
 
 .button.button-accent {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  border-color: hsl(var(--accent-color));
+  color: hsl(var(--accent-color));
 }
 
 .sr-only {
@@ -146,9 +153,22 @@ picture {
 }
 
 .search-input>input {
-  border: 2px solid var(--primary-color);
-  border-radius: .75rem;
+  border: 2px solid hsl(var(--primary-color));
+  border-radius: .75em;
+  font-size: 0.8rem;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .search-input>input {
+    font-size: 1rem;
+  }
+}
+
+.search-input>input {}
+
+.search-input>input:focus {
+  border-color: hsl(var(--primary-color-tint));
 }
 
 .search-input>input::placeholder {
@@ -168,7 +188,7 @@ picture {
 .search-button>svg {
   fill: none;
   height: 1.25rem;
-  stroke: var(--primary-color);
+  stroke: hsl(var(--primary-color));
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2.2px;
@@ -198,7 +218,7 @@ picture {
   left: 0;
   height: 100%;
   width: 3px;
-  background-color: var(--primary-color);
+  background-color: hsl(var(--primary-color));
   border-radius: 10px;
 }
 
@@ -209,14 +229,14 @@ picture {
   right: 0;
   height: 100%;
   width: 3px;
-  background-color: var(--primary-color);
+  background-color: hsl(var(--primary-color));
   border-radius: 10px;
 }
 
 .nav-item>a {
-  background-image: -moz-linear-gradient(90deg, var(--accent-color), var(--accent-color) 50%, var(--primary-color) 50%);
-  background-image: -webkit-linear-gradient(90deg, var(--accent-color), var(--accent-color) 50%, var(--primary-color) 50%);
-  background-image: linear-gradient(to right, var(--accent-color), var(--accent-color) 50%, var(--primary-color) 50%);
+  background-image: -moz-linear-gradient(90deg, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--primary-color)) 50%);
+  background-image: -webkit-linear-gradient(90deg, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--primary-color)) 50%);
+  background-image: linear-gradient(to right, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--primary-color)) 50%);
   background-size: 200% 100%;
   background-position: -100%;
   font-family: 'omnessemibold';
@@ -253,7 +273,7 @@ picture {
   height: 4px;
   transition: transform .22s cubic-bezier(.55, .055, .675, .19);
   border-radius: 4px;
-  background-color: var(--primary-color);
+  background-color: hsl(var(--primary-color));
 }
 
 .trigger-inner {
@@ -303,7 +323,7 @@ picture {
 .mini-cart>svg {
   fill: none;
   height: 1.5625rem;
-  stroke: var(--primary-color);
+  stroke: hsl(var(--primary-color));
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 2px;
@@ -313,9 +333,9 @@ picture {
   height: .9375rem;
   width: .9375rem;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: hsl(var(--accent-color));
   font-size: .625rem;
-  color: var(--white-color);
+  color: hsl(var(--white-color));
   display: grid;
   place-items: center;
   position: absolute;
@@ -328,26 +348,41 @@ picture {
   font-size: 1.625rem;
 }
 
+.overlay,
 .mobile-nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--primary-color);
   height: 100%;
+  backdrop-filter: blur(5px);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay {
+  background-color: rgb(0, 0, 0, 50%);
+  width: 100%;
+  transform: translateX(100%);
+}
+
+.mobile-nav {
+  background-color: hsl(var(--primary-color) / .8);
   width: 80%;
   padding-block: 3.125rem;
   padding-inline: 1.5625rem;
-  backdrop-filter: blur(5px);
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-100%);
 }
 
+.overlay.is-open,
+.mobile-nav.is-open {
+  transform: translateX(0);
+}
+
 .nav-item-mobile:not(:last-child) {
-  border-bottom: 2px solid var(--white-color);
+  border-bottom: 2px solid hsl(var(--white-color));
 }
 
 .nav-item-mobile>a {
-  color: var(--white-color);
+  color: hsl(var(--white-color));
   display: block;
   padding: .9375rem.625rem;
   text-decoration: none;
@@ -360,7 +395,7 @@ picture {
 }
 
 .social-nav a {
-  background-color: var(--white-color);
+  background-color: hsl(var(--white-color));
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -370,5 +405,5 @@ picture {
 }
 
 .social-nav a>i {
-  color: var(--primary-color);
+  color: hsl(var(--primary-color));
 }
