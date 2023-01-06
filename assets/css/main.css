@@ -164,6 +164,7 @@ picture {
 /* Hero */
 .hero-content {
   background-image: linear-gradient(135deg, hsl(var(--gradient-color-from)) 60%, hsl(var(--gradient-color-to)));
+  height: 100%;
   padding-block: 1.875rem;
 }
 
@@ -441,21 +442,38 @@ picture {
   row-gap: 1.25rem;
 }
 
-.service-item,
-.service-icon {
-  display: grid;
-  place-items: center;
+@media (min-width: 768px) {
+  .services {
+    row-gap: 3.75rem;
+    place-items: center;
+  }
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
 }
 
 .service-icon {
   background-color: hsl(var(--white-color));
   border: 2px solid hsl(var(--primary-color));
   border-radius: 50%;
+  display: grid;
+  place-items: center;
   height: 4.6875rem;
   width: 4.6875rem;
   padding: .8125rem;
   margin-block-end: .625rem;
   transition: background 300ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .service-icon {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
 }
 
 .service-icon>svg {
@@ -494,6 +512,7 @@ picture {
 }
 
 .service-title {
+  color: hsl(var(--primary-color));
   font-family: 'omnessemibold';
   font-size: .75rem;
   line-height: 1;
