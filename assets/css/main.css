@@ -294,11 +294,24 @@ picture {
 /*                                 LAYOUTS                                    */
 /* -------------------------------------------------------------------------- */
 
-/* Hero */
+/* Hero section */
 .hero-content {
   background-image: linear-gradient(135deg, hsl(var(--gradient-color-from)) 60%, hsl(var(--gradient-color-to)));
   height: 100%;
   padding-block: 1.875rem;
+}
+
+/* Video section */
+.video {
+  padding-block: 6.25rem;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .video {
+    margin-top: -10.625rem;
+    z-index: -2;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -697,7 +710,7 @@ picture {
 
 .ot-video::before {
   content: '';
-  background-color: hsl(var(--text-color) / .5);
+  background-color: hsl(var(--text-color) / .3);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -722,16 +735,23 @@ picture {
 .ot-video-button>svg {
   border-radius: 50%;
   fill: hsl(var(--white-color));
-  height: 120px;
-  width: 120px;
+  height: 80px;
+  width: 80px;
   transition: 1s;
+}
+
+@media (min-width: 768px) {
+  .ot-video-button>svg {
+    height: 120px;
+    width: 120px;
+  }
 }
 
 .ot-video-button>svg .stroke-solid {
   stroke-dashoffset: 0;
   stroke: hsl(var(--white-color));
   stroke-dashArray: 300;
-  stroke-width: 4px;
+  stroke-width: 6px;
   transition: stroke-dashoffset 1s, opacity 1s;
 }
 
