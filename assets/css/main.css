@@ -54,6 +54,7 @@
 
   /* Font Familiy */
   --body-font: 'omnesmedium', sans-serif;
+  --body-font-italic: 'omnesmediumitalic', sans-serif;
   --paragraph-font: 'Roboto', sans-serif;
   --ff-semibold: 'omnessemibold', sans-serif;
   --ff-semibold-italic: 'omnessemibolditalic', sans-serif;
@@ -62,7 +63,7 @@
   --fs-section-title: 2.875rem;
   --fs-section-subtitle: 1.875rem;
   --fs-section-paragraph: 1.125rem;
-  --fs-btn: 1.25rem;
+  --fs-btn: 1.125rem;
 
   /* Font Weights */
   --fw-light: 300;
@@ -70,6 +71,13 @@
   --fw-medium: 500;
   --fw-bold: 700;
 
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* Font Sizes */
+    --fs-section-title: 2.375rem;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -146,10 +154,25 @@ picture {
 
 .button {
   background-color: transparent;
-  border: 2px solid;
+  border: 3px solid;
+  border-radius: 1.875rem;
   font-size: var(--fs-btn);
-  padding-block: .625em;
+  padding-block: .3125em;
+  padding-inline: 1.25em;
   text-decoration: none;
+}
+
+.button.icon>svg {
+  margin-left: .625em;
+  width: 1.125rem;
+}
+
+.button.icon>svg .line {
+  fill: none;
+  stroke: hsl(var(--accent-color));
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 3.5px;
 }
 
 .button.button-primary {
@@ -168,20 +191,36 @@ picture {
   color: hsl(var(--accent-color));
 }
 
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-secondary {
+  color: var(--secondary-color);
+}
+
+.color-accent {
+  color: var(--accent-color);
+}
+
+.ff-paragraph {
+  font-family: var(--paragraph-font);
+}
+
 .ff-medium {
-  font-family: 'omnesmedium';
+  font-family: var(--body-font);
 }
 
 .ff-medium-italic {
-  font-family: 'omnesmediumitalic';
+  font-family: var(--body-font-italic);
 }
 
 .ff-semibold {
-  font-family: 'omnessemibold';
+  font-family: var(--ff-semibold);
 }
 
 .ff-semibold-italic {
-  font-family: 'omnessemibolditalic';
+  font-family: var(--ff-semibold-italic);
 }
 
 .sr-only {
@@ -571,4 +610,27 @@ picture {
 .pagos .next>svg .line,
 .pagos .prev>svg .line {
   stroke: hsl(var(--secondary-color));
+}
+
+/* ----------- Recaudación ---------- */
+.recauda {
+  padding-block: 3.125rem;
+}
+
+@media (min-width: 992px) {
+  .recauda {
+    padding-block: 9.375rem;
+  }
+
+  .recauda .section-content {
+    padding-inline-end: 9.375rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .recauda .section-image img {
+    margin-block-start: -3.125rem;
+    width: 80%;
+    z-index: -1;
+  }
 }
