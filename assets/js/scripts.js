@@ -41,8 +41,8 @@ var swiper = new Swiper(".pagos-carousel", {
     disableOnInteraction: false,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".next",
+    prevEl: ".prev",
   },
   breakpoints: {
     640: {

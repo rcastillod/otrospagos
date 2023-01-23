@@ -89,6 +89,45 @@ picture {
   display: block;
 }
 
+.carousel-wrapper {
+  position: relative;
+}
+
+.next,
+.prev {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: -50px;
+  left: auto;
+}
+
+.prev {
+  right: auto;
+  left: -50px;
+}
+
+.next>svg,
+.prev>svg {
+  width: .9375rem;
+}
+
+.next>svg .line,
+.prev>svg .line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
@@ -525,4 +564,11 @@ picture {
   .service-title {
     font-size: .875rem;
   }
+}
+
+/* -------------- Pagos ------------- */
+
+.pagos .next>svg .line,
+.pagos .prev>svg .line {
+  stroke: hsl(var(--secondary-color));
 }
