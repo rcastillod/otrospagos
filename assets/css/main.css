@@ -157,9 +157,39 @@ picture {
   border: 3px solid;
   border-radius: 1.875rem;
   font-size: var(--fs-btn);
+  overflow: hidden;
   padding-block: .3125em;
   padding-inline: 1.25em;
+  position: relative;
   text-decoration: none;
+}
+
+.button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-110%);
+  -moz-transform: translateX(-110%);
+  -ms-transform: translateX(-110%);
+  transform: translateX(-110%);
+  -webkit-transition: all .3s cubic-bezier(.15, 0, 0, 1);
+  -moz-transition: all .3s cubic-bezier(.15, 0, 0, 1);
+  transition: all .3s cubic-bezier(.15, 0, 0, 1);
+  z-index: -1;
+}
+
+.button:is(:hover, :focus) {
+  color: hsl(var(--white-color)) !important;
+}
+
+.button:is(:hover, :focus)::before {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 .button.icon>svg {
@@ -189,6 +219,18 @@ picture {
 .button.button-accent {
   border-color: hsl(var(--accent-color));
   color: hsl(var(--accent-color));
+}
+
+.button.button-primary::before {
+  background: hsl(var(--primary-color));
+}
+
+.button.button-secondary::before {
+  background: hsl(var(--secondary-color));
+}
+
+.button.button-accent::before {
+  background: hsl(var(--accent-color));
 }
 
 .color-primary {
