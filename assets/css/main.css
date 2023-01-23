@@ -76,7 +76,7 @@
 @media (max-width: 767px) {
   :root {
     /* Font Sizes */
-    --fs-section-title: 2rem;
+    --fs-section-title: 2.125rem;
   }
 }
 
@@ -205,6 +205,10 @@ picture {
   stroke-width: 3.5px;
 }
 
+.button.icon:is(:hover, :focus)>svg .line {
+  stroke: hsl(var(--white-color));
+}
+
 .button.button-primary {
   background-color: hsl(var(--primary-color));
   border-color: hsl(var(--primary-color));
@@ -219,6 +223,11 @@ picture {
 .button.button-accent {
   border-color: hsl(var(--accent-color));
   color: hsl(var(--accent-color));
+}
+
+.button.button-white {
+  border-color: hsl(var(--white-color));
+  color: hsl(var(--white-color));
 }
 
 .button.button-primary::before {
@@ -243,6 +252,10 @@ picture {
 
 .color-accent {
   color: var(--accent-color);
+}
+
+.bg-primary-tint {
+  background-color: hsl(var(--primary-color-tint));
 }
 
 .ff-paragraph {
@@ -675,4 +688,58 @@ picture {
     width: 80%;
     z-index: -1;
   }
+}
+
+/* -------------- Video ------------- */
+.ot-video {
+  position: relative;
+}
+
+.ot-video::before {
+  content: '';
+  background-color: hsl(var(--text-color) / .5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.ot-video img {
+  width: 100%;
+}
+
+.ot-video-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 1s ease-in-out;
+  z-index: 2;
+}
+
+.ot-video-button>svg {
+  border-radius: 50%;
+  fill: hsl(var(--white-color));
+  height: 120px;
+  width: 120px;
+  transition: 1s;
+}
+
+.ot-video-button>svg .stroke-solid {
+  stroke-dashoffset: 0;
+  stroke: hsl(var(--white-color));
+  stroke-dashArray: 300;
+  stroke-width: 4px;
+  transition: stroke-dashoffset 1s, opacity 1s;
+}
+
+.ot-video-button:is(:hover, :focus)>svg {
+  background-color: hsl(var(--white-color) / .3);
+}
+
+.ot-video-button:is(:hover, :focus) .stroke-solid {
+  opacity: 1;
+  stroke-dashoffset: 300;
 }
