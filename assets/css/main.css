@@ -156,12 +156,16 @@ picture {
   background-color: transparent;
   border: 3px solid;
   border-radius: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--fs-btn);
   overflow: hidden;
-  padding-block: .3125em;
-  padding-inline: 1.25em;
+  height: 2.8125em;
+  width: 9.0625em;
   position: relative;
   text-decoration: none;
+  z-index: 1;
 }
 
 .button::before {
@@ -181,10 +185,6 @@ picture {
   z-index: -1;
 }
 
-.button:is(:hover, :focus) {
-  color: hsl(var(--white-color)) !important;
-}
-
 .button:is(:hover, :focus)::before {
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
@@ -199,14 +199,9 @@ picture {
 
 .button.icon>svg .line {
   fill: none;
-  stroke: hsl(var(--accent-color));
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 3.5px;
-}
-
-.button.icon:is(:hover, :focus)>svg .line {
-  stroke: hsl(var(--white-color));
 }
 
 .button.button-primary {
@@ -215,9 +210,25 @@ picture {
   color: hsl(var(--white-color));
 }
 
+.button.button-primary.icon>svg .line {
+  stroke: hsl(var(--white-color));
+}
+
 .button.button-secondary {
   border-color: hsl(var(--secondary-color));
+  color: hsl(var(--secondary-color));
+}
+
+.button.button-secondary.icon>svg .line {
+  stroke: hsl(var(--secondary-color));
+}
+
+.button.button-secondary:is(:hover, :focus) {
   color: hsl(var(--primary-color));
+}
+
+.button.button-secondary:is(:hover, :focus).icon>svg .line {
+  stroke: hsl(var(--primary-color));
 }
 
 .button.button-accent {
@@ -225,9 +236,33 @@ picture {
   color: hsl(var(--accent-color));
 }
 
+.button.button-accent.icon>svg .line {
+  stroke: hsl(var(--accent-color));
+}
+
+.button.button-accent:is(:hover, :focus) {
+  color: hsl(var(--white-color));
+}
+
+.button.button-accent:is(:hover, :focus).icon>svg .line {
+  stroke: hsl(var(--white-color));
+}
+
 .button.button-white {
   border-color: hsl(var(--white-color));
   color: hsl(var(--white-color));
+}
+
+.button.button-white.icon>svg .line {
+  stroke: hsl(var(--white-color));
+}
+
+.button.button-white:is(:hover, :focus) {
+  color: hsl(var(--primary-color));
+}
+
+.button.button-white:is(:hover, :focus).icon>svg .line {
+  stroke: hsl(var(--primary-color));
 }
 
 .button.button-primary::before {
@@ -240,6 +275,10 @@ picture {
 
 .button.button-accent::before {
   background: hsl(var(--accent-color));
+}
+
+.button.button-white::before {
+  background: hsl(var(--white-color));
 }
 
 .color-primary {
