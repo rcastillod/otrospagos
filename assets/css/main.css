@@ -76,7 +76,7 @@
 @media (max-width: 767px) {
   :root {
     /* Font Sizes */
-    --fs-section-title: 2.375rem;
+    --fs-section-title: 2rem;
   }
 }
 
