@@ -94,7 +94,6 @@ body {
 img,
 picture {
   max-width: 100%;
-  display: block;
 }
 
 .carousel-wrapper {
@@ -317,6 +316,16 @@ picture {
   font-family: var(--ff-semibold-italic);
 }
 
+.py-15 {
+  padding-block: 3.125rem;
+}
+
+@media (min-width: 992px) {
+  .py-15 {
+    padding-block: 9.375rem;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -340,6 +349,33 @@ picture {
   padding-block: 1.875rem;
 }
 
+/* Recaudación */
+@media (min-width: 992px) {
+  .recauda .section-content {
+    padding-inline-end: 9.375rem;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .recauda .section-image img,
+  .recarga .section-image img {
+    width: 80%;
+    z-index: -1;
+  }
+
+  .recauda .section-image img {
+    margin-block-start: -3.125rem;
+  }
+
+  .recarga .section-image img {
+    margin-block-start: -7.5rem;
+    margin-block-end: 3.125rem;
+  }
+
+
+}
+
 /* Video section */
 .video {
   padding-block: 6.25rem;
@@ -348,10 +384,19 @@ picture {
 
 @media (max-width: 991px) {
   .video {
+    padding-block-end: 9.375rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .video {
     margin-top: -10.625rem;
     z-index: -2;
   }
 }
+
+/* Recarga section */
+
 
 /* -------------------------------------------------------------------------- */
 /*                                 COMPONENTS                                 */
@@ -719,29 +764,6 @@ picture {
   stroke: hsl(var(--secondary-color));
 }
 
-/* ----------- Recaudación ---------- */
-.recauda {
-  padding-block: 3.125rem;
-}
-
-@media (min-width: 992px) {
-  .recauda {
-    padding-block: 9.375rem;
-  }
-
-  .recauda .section-content {
-    padding-inline-end: 9.375rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .recauda .section-image img {
-    margin-block-start: -3.125rem;
-    width: 80%;
-    z-index: -1;
-  }
-}
-
 /* -------------- Video ------------- */
 .ot-video {
   position: relative;
@@ -801,4 +823,26 @@ picture {
 .ot-video-button:is(:hover, :focus) .stroke-solid {
   opacity: 1;
   stroke-dashoffset: 300;
+}
+
+/* ----------- Grid logos ----------- */
+.ot-logo-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-block-start: 5rem;
+}
+
+@media (min-width: 992px) {
+  .ot-logo-grid {
+    gap: 3.125rem;
+  }
+}
+
+.ot-logo-grid a {
+  transition: transform .3s ease-in-out;
+}
+
+.ot-logo-grid a:is(:hover, :focus) {
+  transform: scale(.9);
 }
