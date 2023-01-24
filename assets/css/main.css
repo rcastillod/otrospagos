@@ -142,6 +142,39 @@ section {
   stroke-width: 3px;
 }
 
+/* Bootstrap form input reset */
+form input[type="text"]:not(#nav-search),
+form input[type="tel"],
+form input[type="email"],
+form select.form-select,
+form textarea.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #1D1D1B;
+  font-family: var(--paragraph-font);
+}
+
+form input[type="text"]:not(#nav-search):focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus,
+form select.form-select:focus,
+form textarea.form-control:focus {
+  box-shadow: none;
+  border-bottom-color: hsl(var(--primary-color));
+}
+
+form input[type="text"]:not(#nav-search)::placeholder,
+form input[type="tel"]::placeholder,
+form input[type="email"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+  color: hsl(var(--grey-color));
+}
+
+form select.form-select {
+  background-image: url('../images/down-angle.svg');
+}
+
 /* Bootstrap invalid feedback */
 .invalid-feedback {
   color: hsl(var(--primary-color));
@@ -1000,34 +1033,3 @@ footer .footer-nav .nav-item::after {
 }
 
 /* -------------- Forms ------------- */
-form input[type="text"]:not(#nav-search),
-form input[type="tel"],
-form input[type="email"],
-form select.form-select,
-form textarea.form-control {
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid #1D1D1B;
-  font-family: var(--paragraph-font);
-}
-
-form input[type="text"]:not(#nav-search):focus,
-form input[type="tel"]:focus,
-form input[type="email"]:focus,
-form select.form-select:focus,
-form textarea.form-control:focus {
-  box-shadow: none;
-  border-bottom-color: hsl(var(--primary-color));
-}
-
-form input[type="text"]:not(#nav-search)::placeholder,
-form input[type="tel"]::placeholder,
-form input[type="email"]::placeholder,
-form select::placeholder,
-form textarea::placeholder {
-  color: hsl(var(--grey-color));
-}
-
-form select.form-select {
-  background-image: url('../images/down-angle.svg');
-}
