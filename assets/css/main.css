@@ -882,6 +882,21 @@ picture {
   }
 }
 
+@media (max-width: 575px) {
+  .footer-nav>ul {
+    flex-wrap: wrap;
+    row-gap: 1.875rem;
+  }
+
+  .footer-nav .nav-item {
+    flex: 50%;
+  }
+
+  .footer-nav .nav-item:nth-child(3)::before {
+    display: none;
+  }
+}
+
 .footer-nav .nav-item:first-child::before {
   display: none;
 }
