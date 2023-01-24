@@ -50,6 +50,7 @@
   --gradient-color-from: 261 54% 95%;
   --gradient-color-to: 259 54% 87%;
   --text-color: 0 0% 0%;
+  --grey-color: 0 0% 52%;
   --white-color: 0 0% 100%;
 
   /* Font Familiy */
@@ -101,6 +102,7 @@ section {
   position: relative;
 }
 
+/* Swiper Slider  */
 .carousel-wrapper {
   position: relative;
 }
@@ -140,6 +142,50 @@ section {
   stroke-width: 3px;
 }
 
+/* Bootstrap invalid feedback */
+.invalid-feedback {
+  color: hsl(var(--primary-color));
+}
+
+/* Invalid */
+.form-control.is-invalid,
+.was-validated .form-control:invalid,
+.form-select.is-invalid,
+.was-validated .form-select:invalid {
+  background-image: url('../images/invalid-icon.svg');
+  border-color: hsl(var(--primary-color));
+}
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-select.is-invalid:focus,
+.was-validated .form-select:invalid:focus {
+  border-color: hsl(var(--primary-color));
+}
+
+/* Valid */
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: url('../images/valid-icon.svg');
+}
+
+.form-select.is-valid:focus,
+.was-validated .form-select:valid:focus {
+  border-color: hsl(var(--primary-color));
+}
+
+/* Remove box shadow on focus (valid or invalid) */
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-select.is-invalid:focus,
+.was-validated .form-select:invalid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.form-select.is-valid:focus,
+.was-validated .form-select:valid:focus {
+  box-shadow: none;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
@@ -147,6 +193,16 @@ section {
 @media (min-width: 1140px) {
   .inner-wrapper {
     padding-inline: 6.25rem;
+  }
+}
+
+.inner-page {
+  padding-block-end: 5rem;
+}
+
+@media (min-width: 768px) {
+  .inner-page {
+    padding-block-end: 12.5rem;
   }
 }
 
@@ -165,6 +221,7 @@ section {
 .section-title-small {
   font-weight: 600;
   letter-spacing: 1px;
+  margin-block-end: 3.125rem;
   text-transform: uppercase;
 }
 
@@ -182,6 +239,11 @@ section {
   position: relative;
   text-decoration: none;
   z-index: 1;
+}
+
+.button.small {
+  height: 2.5em;
+  width: 7.35em;
 }
 
 .button::before {
@@ -232,7 +294,7 @@ section {
 
 .button.button-secondary {
   border-color: hsl(var(--secondary-color));
-  color: hsl(var(--secondary-color));
+  color: hsl(var(--primary-color));
 }
 
 .button.button-secondary.icon>svg .line {
@@ -373,8 +435,8 @@ section {
   width: auto;
 }
 
-.footer-nav .nav-item::before,
-.footer-nav .nav-item::after {
+footer .footer-nav .nav-item::before,
+footer .footer-nav .nav-item::after {
   background-color: hsl(var(--white-color));
   width: 1px;
 }
@@ -935,4 +997,37 @@ section {
 .absolute-image {
   position: absolute;
   top: 1.5625rem;
+}
+
+/* -------------- Forms ------------- */
+form input[type="text"]:not(#nav-search),
+form input[type="tel"],
+form input[type="email"],
+form select.form-select,
+form textarea.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #1D1D1B;
+  font-family: var(--paragraph-font);
+}
+
+form input[type="text"]:not(#nav-search):focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus,
+form select.form-select:focus,
+form textarea.form-control:focus {
+  box-shadow: none;
+  border-bottom-color: hsl(var(--primary-color));
+}
+
+form input[type="text"]:not(#nav-search)::placeholder,
+form input[type="tel"]::placeholder,
+form input[type="email"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+  color: hsl(var(--grey-color));
+}
+
+form select.form-select {
+  background-image: url('../images/down-angle.svg');
 }
