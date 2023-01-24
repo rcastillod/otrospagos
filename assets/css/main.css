@@ -43,7 +43,7 @@
 :root {
 
   /* Colors */
-  --primary-color: 259 56% 49%;
+  --primary-color: 266 49% 42%;
   --primary-color-tint: 259 54% 80%;
   --secondary-color: 70 100% 47%;
   --accent-color: 6 100% 70%;
@@ -63,6 +63,7 @@
   --fs-section-title: 2.875rem;
   --fs-section-subtitle: 1.875rem;
   --fs-section-paragraph: 1.125rem;
+  --fs-nav: .875rem;
   --fs-btn: 1.125rem;
 
   /* Font Weights */
@@ -292,6 +293,10 @@ picture {
   color: var(--accent-color);
 }
 
+.bg-primary-clr {
+  background-color: hsl(var(--primary-color));
+}
+
 .bg-primary-tint {
   background-color: hsl(var(--primary-color-tint));
 }
@@ -373,7 +378,6 @@ picture {
     margin-block-end: 3.125rem;
   }
 
-
 }
 
 /* Video section */
@@ -394,8 +398,6 @@ picture {
     z-index: -2;
   }
 }
-
-/* Recarga section */
 
 
 /* -------------------------------------------------------------------------- */
@@ -497,6 +499,7 @@ picture {
   background-size: 200% 100%;
   background-position: -100%;
   font-family: 'omnessemibold';
+  font-size: var(--fs-nav);
   letter-spacing: 1px;
   position: relative;
   text-decoration: none;
@@ -845,4 +848,46 @@ picture {
 
 .ot-logo-grid a:is(:hover, :focus) {
   transform: scale(.9);
+}
+
+/* ------------- Footer ------------- */
+.footer-nav .nav-item {
+  align-items: center;
+  padding-block: .3125rem;
+  padding-inline: 3.125rem;
+  text-align: center;
+  width: auto;
+}
+
+.footer-nav .nav-item::before,
+.footer-nav .nav-item::after {
+  background-color: hsl(var(--white-color));
+  width: 1px;
+}
+
+@media (max-width: 991px) {
+  .footer-nav .nav-item {
+    padding-block: 0;
+    padding-inline: 1.875rem;
+  }
+
+  .footer-nav .nav-item::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-nav .nav-item>a {
+    font-size: .75rem;
+  }
+}
+
+.footer-nav .nav-item:first-child::before {
+  display: none;
+}
+
+.footer-nav .nav-item>a {
+  background-image: -moz-linear-gradient(90deg, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--white-color)) 50%);
+  background-image: -webkit-linear-gradient(90deg, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--white-color)) 50%);
+  background-image: linear-gradient(to right, hsl(var(--accent-color)), hsl(var(--accent-color)) 50%, hsl(var(--white-color)) 50%);
 }
