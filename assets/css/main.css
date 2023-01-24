@@ -251,6 +251,7 @@ form select.form-select {
 }
 
 .section-title {
+  font-family: var(--ff-semibold);
   font-size: var(--fs-section-title);
   font-weight: var(--fw-bold);
   letter-spacing: .325rem;
@@ -537,6 +538,20 @@ footer .footer-nav .nav-item::after {
   background-image: linear-gradient(135deg, hsl(var(--gradient-color-from)) 60%, hsl(var(--gradient-color-to)));
   height: 100%;
   padding-block: 1.875rem;
+}
+
+/* Inner hero section */
+.inner-hero {
+  background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 10%, hsl(var(--gradient-color-from)));
+  background-repeat: no-repeat;
+  background-position-y: -9.375rem;
+}
+
+@media (min-width: 576px) {
+  .inner-hero {
+    background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 0%, hsl(var(--gradient-color-from)) 0%);
+    background-position-y: unset;
+  }
 }
 
 /* Recaudación */
@@ -1039,8 +1054,16 @@ footer .footer-nav .nav-item::after {
 
 /* --------- Absolute image --------- */
 .absolute-image {
+  max-width: 60%;
   position: absolute;
-  top: 1.5625rem;
+  right: 0;
+  top: 7.5625rem;
 }
 
-/* -------------- Forms ------------- */
+@media (min-width: 576px) {
+  .absolute-image {
+    max-width: 100%;
+    top: 1.5625rem;
+    right: unset;
+  }
+}
