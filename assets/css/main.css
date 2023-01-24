@@ -436,6 +436,8 @@ picture {
 }
 
 .search-button {
+  background-color: transparent;
+  border: none;
   height: 100%;
   width: 1.875rem;
   position: absolute;

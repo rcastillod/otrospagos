@@ -6,12 +6,14 @@ const mobilePanelOverlay = document.querySelector('.overlay')
 
 const activeMenuPanel = () => {
   navTrigger.classList.add('is-active')
+  navTrigger.setAttribute('aria-expanded', 'true')
   mobilePanel.classList.add('is-open')
   mobilePanelOverlay.classList.add('is-open')
 }
 
 const deactivateMenuPanel = () => {
   navTrigger.classList.remove('is-active')
+  navTrigger.setAttribute('aria-expanded', 'false')
   mobilePanel.classList.remove('is-open')
   mobilePanelOverlay.classList.remove('is-open')
 }
