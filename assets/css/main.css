@@ -219,6 +219,17 @@ form select.form-select {
   box-shadow: none;
 }
 
+/* Bootstrap alert custom */
+.alert {
+  border-radius: 0;
+  border: none;
+}
+
+.ot-alert-success {
+  background-color: hsl(var(--secondary-color));
+  color: hsl(var(--text-color));
+}
+
 /* -------------------------------------------------------------------------- */
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
