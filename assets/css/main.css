@@ -200,6 +200,7 @@ form select.form-select {
 .form-control.is-valid,
 .was-validated .form-control:valid {
   background-image: url('../images/valid-icon.svg');
+  border-color: hsl(var(--text-color));
 }
 
 .form-select.is-valid:focus,
@@ -1060,7 +1061,7 @@ footer .footer-nav .nav-item::after {
   top: 7.5625rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .absolute-image {
     max-width: 100%;
     top: 1.5625rem;
