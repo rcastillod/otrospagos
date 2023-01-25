@@ -316,8 +316,15 @@ form select.form-select {
 }
 
 .button.icon>svg {
-  margin-left: .625em;
   width: 1.125rem;
+}
+
+.button.left-icon>svg {
+  margin-right: .625em;
+}
+
+.button.right-icon>svg {
+  margin-left: .625em;
 }
 
 .button.icon>svg .line {
