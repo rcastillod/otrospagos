@@ -236,17 +236,17 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 
 @media (min-width: 1140px) {
-  .inner-wrapper {
+  .inner-page-wrapper {
     padding-inline: 6.25rem;
   }
 }
 
-.inner-page {
+.inner-page-section {
   padding-block-end: 5rem;
 }
 
 @media (min-width: 768px) {
-  .inner-page {
+  .inner-page-section {
     padding-block-end: 12.5rem;
   }
 }
@@ -272,7 +272,7 @@ form select.form-select {
 }
 
 .button {
-  background-color: transparent;
+  background-color: hsl(var(--white-color));
   border: 3px solid;
   border-radius: 1.875rem;
   display: flex;
@@ -542,14 +542,14 @@ footer .footer-nav .nav-item::after {
 }
 
 /* Inner hero section */
-.inner-hero {
+.inner-page-hero {
   background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 10%, hsl(var(--gradient-color-from)));
   background-repeat: no-repeat;
   background-position-y: -9.375rem;
 }
 
 @media (min-width: 576px) {
-  .inner-hero {
+  .inner-page-hero {
     background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 0%, hsl(var(--gradient-color-from)) 0%);
     background-position-y: unset;
   }
