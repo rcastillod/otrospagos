@@ -59,6 +59,29 @@ var swiper = new Swiper(".pagos-carousel", {
   },
 });
 
+/* --------- Services carousel --------- */
+var swiper = new Swiper(".services-carousel", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: false,
+  autoplay: false,
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 5,
+    },
+    1024: {
+      slidesPerView: 8,
+    },
+  },
+});
+
 /* --- Bootstrap custom validation -- */
 (() => {
   'use strict'

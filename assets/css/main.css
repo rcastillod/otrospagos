@@ -144,6 +144,16 @@ section {
   stroke-width: 3px;
 }
 
+.pagos .next>svg .line,
+.pagos .prev>svg .line {
+  stroke: hsl(var(--secondary-color));
+}
+
+.services .next>svg .line,
+.services .prev>svg .line {
+  stroke: hsl(var(--primary-color));
+}
+
 /* Bootstrap form input reset */
 form input[type="text"]:not(#nav-search),
 form input[type="tel"],
@@ -996,14 +1006,14 @@ footer .footer-nav .nav-item::after {
 }
 
 /* ------------ Services ------------ */
-.services {
+.hero-content .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .services {
+  .hero-content .services {
     row-gap: 3.75rem;
     place-items: center;
   }
@@ -1030,7 +1040,7 @@ footer .footer-nav .nav-item::after {
 }
 
 @media (min-width: 768px) {
-  .service-icon {
+  .hero-content .service-icon {
     height: 6.25rem;
     width: 6.25rem;
   }
@@ -1063,10 +1073,12 @@ footer .footer-nav .nav-item::after {
   fill: hsl(var(--secondary-color));
 }
 
+.service-item.active .service-icon,
 .service-item:is(:hover, :focus) .service-icon {
   background-color: hsl(var(--primary-color));
 }
 
+.service-item.active .service-icon>svg .clr-1.stroke,
 .service-item:is(:hover, :focus) .service-icon>svg .clr-1.stroke {
   stroke: hsl(var(--white-color));
 }
@@ -1086,11 +1098,19 @@ footer .footer-nav .nav-item::after {
   }
 }
 
-/* -------------- Pagos ------------- */
+/* Services carousel */
+@media (max-width: 767px) {
+  .services-carousel {
+    padding-inline: 1.25rem;
+  }
 
-.pagos .next>svg .line,
-.pagos .prev>svg .line {
-  stroke: hsl(var(--secondary-color));
+  .services-carousel+.next {
+    right: -5px;
+  }
+
+  .services-carousel+.next+.prev {
+    left: -5px;
+  }
 }
 
 /* -------------- Video ------------- */
