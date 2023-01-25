@@ -247,22 +247,6 @@ form select.form-select {
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
 
-@media (min-width: 1140px) {
-  .inner-page-wrapper {
-    padding-inline: 6.25rem;
-  }
-}
-
-.inner-page-section {
-  padding-block-end: 5rem;
-}
-
-@media (min-width: 768px) {
-  .inner-page-section {
-    padding-block-end: 12.5rem;
-  }
-}
-
 .section-title {
   font-family: var(--ff-semibold);
   font-size: var(--fs-section-title);
@@ -577,6 +561,28 @@ footer .footer-nav .nav-item::after {
 
   .inner-page-hero.has-image {
     background-position-y: unset;
+  }
+}
+
+@media (min-width: 1140px) {
+  .inner-page-wrapper {
+    padding-inline: 6.25rem;
+  }
+}
+
+.inner-page-section {
+  padding-block-end: 5rem;
+}
+
+@media (min-width: 768px) {
+  .inner-page-section {
+    padding-block-end: 12.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner-page-section.negative-top {
+    margin-block-start: -1.875rem;
   }
 }
 
