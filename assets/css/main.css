@@ -274,7 +274,7 @@ form select.form-select {
   background-color: hsl(var(--white-color));
   border: 3px solid;
   border-radius: 1.875rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: var(--fs-btn);
@@ -380,6 +380,7 @@ form select.form-select {
 }
 
 .button.button-white {
+  background-color: transparent;
   border-color: hsl(var(--white-color));
   color: hsl(var(--white-color));
 }
