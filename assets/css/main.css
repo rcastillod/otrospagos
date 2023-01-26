@@ -1006,6 +1006,10 @@ footer .footer-nav .nav-item::after {
   font-weight: var(--fw-light);
 }
 
+.social-nav ul {
+  list-style-type: none;
+}
+
 .social-nav a {
   background-color: hsl(var(--white-color));
   border-radius: 50%;
