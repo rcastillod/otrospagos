@@ -50,7 +50,7 @@
   --accent-color: 6 100% 70%;
   --gradient-color-from: 261 54% 95%;
   --gradient-color-to: 259 54% 87%;
-  --text-color: 0 0% 0%;
+  --text-color: 60 4% 11%;
   --grey-color: 0 0% 52%;
   --white-color: 0 0% 100%;
 
@@ -1253,4 +1253,57 @@ footer .footer-nav .nav-item::after {
   100% {
     transform: rotate(360deg)
   }
+}
+
+/* ---------- Payment table --------- */
+.ot-payment-table {
+  font-family: var(--paragraph-font);
+}
+
+.table>:not(caption)>*>* {
+  border-color: #1D1D1B;
+  border-bottom-width: 2px;
+}
+
+.ot-payment-table>thead>tr>th {
+  padding-block-end: 1.125rem;
+}
+
+.ot-payment-table>tbody>tr:has(+ .payment-description)>td {
+  border-bottom-width: 1px;
+}
+
+.ot-payment-table>tbody>tr.payment-description>* {
+  background-color: hsl(var(--gradient-color-from));
+}
+
+.ot-payment-table>tbody>tr.payment-description p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .ot-payment-table>tbody>tr.payment-description p {
+    font-size: .8125rem;
+  }
+}
+
+.ot-payment-table .form-check-input {
+  border-color: hsl(var(--secondary-color));
+  border-width: 3px;
+  cursor: pointer;
+  height: 1.325em;
+  width: 1.325em;
+}
+
+/* Checkbox states */
+.ot-payment-table .form-check-input:focus {
+  box-shadow: none;
+}
+
+.ot-payment-table .form-check-input:checked {
+  background-color: transparent;
+}
+
+.ot-payment-table .form-check-input:checked[type=checkbox] {
+  background-image: url('../images/checked-icon.svg');
 }
