@@ -1332,3 +1332,43 @@ footer .footer-nav .nav-item::after {
   background-color: transparent;
   border: none;
 }
+
+/* --------- Payment methods -------- */
+.payment-methods {
+  background-color: hsl(var(--grey-color));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(15.9375rem, 1fr));
+  gap: 1px;
+  padding: 0;
+}
+
+.payment-methods>div {
+  background-color: hsl(var(--white-color));
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1.25rem;
+}
+
+.payment-methods>div>label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-methods>div input[type="radio"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.payment-methods>div:is(:hover, :focus),
+.payment-methods>div:has(input[type="radio"]:checked) {
+  border-color: hsl(var(--primary-color));
+}
+
+.payment-methods>div img {
+  margin-bottom: .625rem;
+}
