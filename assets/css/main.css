@@ -429,7 +429,15 @@ form select.form-select {
   background-color: hsl(var(--primary-color));
 }
 
-.bg-primary-tint {
+.bg-primary-clr-100 {
+  background-color: hsl(var(--gradient-color-from));
+}
+
+.bg-primary-clr-200 {
+  background-color: hsl(var(--gradient-color-to));
+}
+
+.bg-primary-clr-300 {
   background-color: hsl(var(--primary-color-tint));
 }
 
@@ -479,6 +487,11 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 /*                                 GLOBAL                                     */
 /* -------------------------------------------------------------------------- */
+
+/* ------------- header ------------- */
+header {
+  background-color: hsl(var(--white-color));
+}
 
 /* ------------- Footer ------------- */
 footer {
@@ -1312,4 +1325,9 @@ footer .footer-nav .nav-item::after {
 
 .ot-payment-table .form-check-input:checked[type=checkbox] {
   background-image: url('../images/checked-icon.svg');
+}
+
+.ot-payment-table .button-delete {
+  background-color: transparent;
+  border: none;
 }
