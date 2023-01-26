@@ -280,15 +280,16 @@ form select.form-select {
   font-size: var(--fs-btn);
   overflow: hidden;
   height: 2.8125em;
-  width: 9.0625em;
+  padding-inline: 1.875em;
   position: relative;
   text-decoration: none;
   z-index: 1;
 }
 
 .button.small {
+  font-size: 1rem;
   height: 2.5em;
-  width: 7.35em;
+  padding-inline: .9375em;
 }
 
 .button::before {
