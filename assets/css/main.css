@@ -89,7 +89,7 @@
 /* -------------------------------------------------------------------------- */
 
 body {
-  color: hsl(var(--primary-color));
+  color: hsl(var(--text-color));
   font-family: var(--body-font);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -413,15 +413,15 @@ form select.form-select {
 }
 
 .color-primary {
-  color: var(--primary-color);
+  color: hsl(var(--primary-color));
 }
 
 .color-secondary {
-  color: var(--secondary-color);
+  color: hsl(var(--secondary-color));
 }
 
 .color-accent {
-  color: var(--accent-color);
+  color: hsl(var(--accent-color));
 }
 
 .bg-primary-clr {
