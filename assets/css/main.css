@@ -281,6 +281,7 @@ form select.form-select {
   font-size: var(--fs-btn);
   overflow: hidden;
   height: 2.8125em;
+  min-width: 6.25em;
   padding-inline: 1.875em;
   position: relative;
   text-decoration: none;
