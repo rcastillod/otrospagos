@@ -108,9 +108,17 @@
                 <div>
                   <div class="ff-paragraph mb-3 fw-bold">El comprobante fue enviado a:<br> maga@somosreal.cl</div>
                   <p class="ff-paragraph" style="--fs-section-paragraph: 1rem">¿Enviar una copia del comprobante?</p>
-                  <form class="d-flex gap-4 needs-validation" action="" method="post">
-                    <input type="email" class="form-control" id="emailcomprob" placeholder="E-mail" required>
-                    <button type="submit" class="button button-secondary small">Enviar</button>
+                  <form class="needs-validation" action="" method="post" novalidate>
+                    <div class="d-flex gap-4">
+                      <div>
+                        <label for="emailcopia" class="form-label sr-only">Email <span>(requerido)</span></label>
+                        <input type="email" class="form-control" id="emailcopia" placeholder="E-mail" required>
+                        <div class="invalid-feedback">
+                          Por favor ingresa un email.
+                        </div>
+                      </div>
+                      <button type="submit" class="button button-secondary small">Enviar</button>
+                    </div>
                   </form>
                 </div>
               </div>
