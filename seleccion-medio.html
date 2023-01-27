@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Otros Pagos - Plataforma online de pagos</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="theme-color" content="#6336c2">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="bg-primary-clr-100">
+
+  <header>
+    <div class="header-wrapper py-4">
+      <div class="container-lg">
+        <div class="row d-flex align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <div class="col-3">
+            <a href="/" class="logo">
+              <img src="assets/images/logo.svg" alt="Otros Pagos" width="150" role="image">
+            </a>
+          </div>
+
+          <div class="col-9 d-flex column-gap-4 column-gap-md-5 align-items-center justify-content-end">
+            <!-- Search form -->
+            <form class="search-form" action="" role="search" method="post">
+              <label for="nav-search" class="d-none">
+                <span class="sr-only">Buscar</span>
+              </label>
+              <div class="search-input">
+                <input id="nav-search" type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
+                <button type="submit" class="search-button">
+                  <span class="sr-only">Buscar</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.64 21.64">
+                    <g>
+                      <circle cx="8.72" cy="8.72" r="7.62" />
+                      <line x1="14.11" y1="14.11" x2="20.54" y2="20.54" />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <!-- Navigation -->
+            <nav class="header-nav d-none d-lg-block" role="navigation">
+              <ul class="nav d-flex">
+                <li class="nav-item">
+                  <a href="#">Ayuda</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Empresas</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- Mini cart -->
+            <a href="#" class="mini-cart">
+              <span class="mini-cart__count">
+                1
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.39 27.36">
+                <g>
+                  <circle cx="3.16" cy="24.2" r="2.16" />
+                  <circle cx="14.98" cy="24.2" r="2.16" />
+                  <polyline points="19.89 2.79 16.91 19.64 1 19.64" />
+                  <path d="M19.89,2.79A2.16,2.16,0,0,1,22.39,1" />
+                  <path d="M19.11,7.2H1v6.22a1.23,1.23,0,0,0,1.06,1.21l15.4,1.93" />
+                </g>
+              </svg>
+            </a>
+            <!-- Mobile menu trigger -->
+            <div id="navTrigger" class="d-block d-lg-none nav-trigger" role="button" aria-label="Abrir menu"
+              aria-expanded="false" aria-haspopup="true">
+              <div class="trigger">
+                <div class="trigger-inner"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="pt-5 inner-page-section">
+      <div class="container">
+        <div class="inner-page-wrapper">
+          <div class="bg-white py-5 px-3 py-md-5 px-md-4 p-lg-5">
+            <div class="row5">
+              <div class="mb-5">
+                <div class="ff-paragraph section-title-small mb-3 color-primary">Selecciona tu medio de pago</div>
+                <p class="ff-paragraph">Revisa el monto a cancelar de cada uno dependiendo si aplica Comisión.<br>
+                  Presiona en cada uno y conoce su detalle, y el que decidas, presiona "pagar ahora"</p>
+              </div>
+
+              <div class="payment-methods">
+                <div>
+                  <label for="webpay">
+                    <input type="radio" name="paymethod" id="webpay">
+                    <img src="assets/images/webpay-payment-logo.png" alt="Webpay">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="bancoestado">
+                    <input type="radio" name="paymethod" id="bancoestado">
+                    <img src="assets/images/bancodechile-payment-logo.png" alt="Banco Estado">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="bancodechile">
+                    <input type="radio" name="paymethod" id="bancodechile">
+                    <img src="assets/images/bancodechile-payment-logo.png" alt="Banco de Chile">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="bci">
+                    <input type="radio" name="paymethod" id="bci">
+                    <img src="assets/images/bci-payment-logo.png" alt="BCI">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="scotia">
+                    <input type="radio" name="paymethod" id="scotia">
+                    <img src="assets/images/scotia-payment-logo.png" alt="Scotiabank">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="fintoc">
+                    <input type="radio" name="paymethod" id="fintoc">
+                    <img src="assets/images/fintoc-payment-logo.png" alt="Fintoc">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="cencosud">
+                    <input type="radio" name="paymethod" id="cencosud">
+                    <img src="assets/images/cencosud-payment-logo.png" alt="Cencosud">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="lapolar">
+                    <input type="radio" name="paymethod" id="lapolar">
+                    <img src="assets/images/lapolar-payment-logo.png" alt="La Polar">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="abcvisa">
+                    <input type="radio" name="paymethod" id="abcvisa">
+                    <img src="assets/images/abcvisa-payment-logo.png" alt="ABC Visa">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="bancoripley">
+                    <input type="radio" name="paymethod" id="bancoripley">
+                    <img src="assets/images/bancoripley-payment-logo.png" alt="Banco Ripley">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="cmr">
+                    <input type="radio" name="paymethod" id="cmr">
+                    <img src="assets/images/cmr-payment-logo.png" alt="CMR">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+                <div>
+                  <label for="hites">
+                    <input type="radio" name="paymethod" id="hites">
+                    <img src="assets/images/hites-payment-logo.png" alt="Hites">
+                    <span class="ff-paragraph fs-6">Total a pagar $10</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-wrapper d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <nav class="footer-nav mb-5 mb-lg-0">
+              <ul class="nav d-flex">
+                <li class="nav-item">
+                  <a href="#">Ayuda</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Terminos y condiciones</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Preguntas frecuentes</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="social-nav">
+              <ul class="d-flex column-gap-4 p-0 ps-lg-5 mb-0">
+                <li class=" social-nav-item">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="social-nav-item">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li class="social-nav-item">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu -->
+  <div class="overlay"></div>
+  <div id="mobileNav" class="mobile-nav">
+    <div id="closeTrigger" class="close-trigger d-flex justify-content-end" role="button" aria-label="Cerrar menu">
+      <i class="fa-solid fa-xmark text-light"></i>
+    </div>
+    <div class="logo-mobile my-4">
+      <img src="assets/images/logo-white.svg" alt="Otros Pagos" width="100" role="image">
+    </div>
+    <nav role="navigation">
+      <ul class="nav d-flex flex-column">
+        <li class="nav-item-mobile">
+          <a href="#">Ayuda</a>
+        </li>
+        <li class="nav-item-mobile">
+          <a href="#">Empresas</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mt-5">
+      <p class="text-light text-center follow">Síguenos</p>
+      <nav role="navigation">
+        <ul class="nav d-flex column-gap-3 justify-content-center social-nav">
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/fslightbox.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>
