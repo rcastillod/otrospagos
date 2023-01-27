@@ -103,46 +103,143 @@
         <div class="inner-page-wrapper">
           <div class="bg-white py-5 px-3 py-md-5 px-md-4 p-lg-5">
             <div class="row">
-              <div class="mb-5">
-                <div class="ff-paragraph section-title-small mb-3 color-primary">Medio de pago seleccionado</div>
-                <p class="ff-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy<br>
-                  nibh
-                  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+              <div class="col-12 col-lg-6">
+                <h3 class="section-title mb-3 color-primary">¡Otro pago realizado con éxito!</h3>
+                <div>
+                  <div class="ff-paragraph mb-3 fw-bold">El comprobante fue enviado a:<br> maga@somosreal.cl</div>
+                  <p class="ff-paragraph" style="--fs-section-paragraph: 1rem">¿Enviar una copia del comprobante?</p>
+                  <form class="d-flex gap-4 needs-validation" action="" method="post">
+                    <input type="email" class="form-control" id="emailcomprob" placeholder="E-mail" required>
+                    <button type="submit" class="button button-secondary small">Enviar</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 text-end position-relative d-none d-lg-block">
+                <img class="position-absolute top-50 anim-shape-01" src="assets/images/angles-shape.svg" width="50"
+                  style="left: 65px">
+                <img src="assets/images/success-payment.png" alt="Pago exitoso">
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 col-lg-4 col-xl-2 text-center text-md-left">
-                <img src="assets/images/webpay-payment-logo.png" alt="Webpay">
+            <div class="row py-4 mt-5 border-top border-bottom border-dark">
+              <div class="col-12">
+                <div class="row gy-3 gx-5 ff-paragraph" style="--fs-section-paragraph: 1rem">
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Comprobante nº:</p>
+                      <p class="mb-0">625478731002565282</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Fecha:</p>
+                      <p class="mb-0">06-09-2022</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Código MP:</p>
+                      <p class="mb-0">0278905510</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Medio de pago:</p>
+                      <p class="mb-0">Webpay</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Tipo de pago:</p>
+                      <p class="mb-0">Redcompra</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Tipo de cuota:</p>
+                      <p class="mb-0">Debito</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Valor cuota:</p>
+                      <p class="mb-0">-</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Número de cuotas:</p>
+                      <p class="mb-0">-</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-12 col-lg-8 col-xl-5">
-                <div
-                  class="ot-order-review ff-paragraph d-flex flex-column gap-4 border-top border-bottom border-dark py-3 mt-2">
-                  <div class="d-flex justify-content-between">
-                    <span>Total deuda</span>
-                    <span>$10</span>
+            </div>
+            <div class="row py-4 border-bottom border-dark">
+              <div class="col-12">
+                <div class="row gy-3 ff-paragraph" style="--fs-section-paragraph: 1rem">
+                  <div class="col-12">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Monto pagado:</p>
+                      <p class="mb-0">$10.-</p>
+                    </div>
                   </div>
-                  <div class="d-flex justify-content-between">
-                    <span>Medio seleccionado</span>
-                    <span>Webpay</span>
-                  </div>
-                  <div class="d-flex justify-content-between">
-                    <span>Comisión por servicio</span>
-                    <span>$0</span>
-                  </div>
-                  <div class="d-flex justify-content-between fw-bold">
-                    <span>Total a pagar</span>
-                    <span>$10</span>
+                  <div class="col-12">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Cargo por servicio:</p>
+                      <p class="mb-0">$0.-</p>
+                    </div>
                   </div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-end gap-4 mt-5">
-                  <button type="submit" class="button button-secondary small">Cambiar medio de pago</button>
-                  <button type="submit" class="button button-primary small">Pagar ahora</button>
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col-12">
+                <div class="row ff-paragraph fw-bold" style="--fs-section-paragraph: 1rem">
+                  <div class="col-12">
+                    <div class="g-col-6 d-flex justify-content-between">
+                      <p class="mb-0">Monto total</p>
+                      <p class="mb-0">$10</p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="table-responsive">
+                <table class="table ot-payment-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Convenio</th>
+                      <th scope="col">Identificador</th>
+                      <th scope="col">Documento</th>
+                      <th scope="col">Subtotal</th>
+                      <th scope="col">Cargos</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Colegio Modelo Valparaíso</td>
+                      <td>116</td>
+                      <td>2021010021</td>
+                      <td>$10.-</td>
+                      <td>$0.-</td>
+                      <td>Total</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-flex justify-content-end gap-5 ff-paragraph">
+                <div>Total:</div>
+                <div>$10.-</div>
+                <div>$0.-</div>
+                <div>$10</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
 
   </main>

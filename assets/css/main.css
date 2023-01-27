@@ -473,6 +473,10 @@ form select.form-select {
   }
 }
 
+.anim-shape-01 {
+  animation: movedelement 5s linear infinite;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
