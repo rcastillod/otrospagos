@@ -577,18 +577,9 @@ footer .footer-nav .nav-item::after {
   background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 10%, hsl(var(--gradient-color-from)));
 }
 
-.inner-page-hero.has-image {
-  background-repeat: no-repeat;
-  background-position-y: -9.375rem;
-}
-
 @media (min-width: 576px) {
   .inner-page-hero {
     background-image: linear-gradient(to right, hsl(var(--gradient-color-to)) 0%, hsl(var(--gradient-color-from)) 0%);
-  }
-
-  .inner-page-hero.has-image {
-    background-position-y: unset;
   }
 }
 
@@ -614,7 +605,7 @@ footer .footer-nav .nav-item::after {
   }
 }
 
-/* Recaudación */
+/* Recaudación - Recarga */
 @media (min-width: 992px) {
   .recauda .section-content {
     padding-inline-end: 9.375rem;
@@ -638,6 +629,19 @@ footer .footer-nav .nav-item::after {
     margin-block-end: 3.125rem;
   }
 
+}
+
+.absolute-button-wrapper {
+  position: absolute;
+  bottom: -70px;
+  left: 10px;
+}
+
+@media (min-width: 767px) {
+  .absolute-button-wrapper {
+    left: unset;
+    right: 0;
+  }
 }
 
 /* Video section */
