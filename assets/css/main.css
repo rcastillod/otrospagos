@@ -631,6 +631,51 @@ footer .footer-nav .nav-item::after {
 
 }
 
+.recauda .section-image::after,
+.recauda .section-image::before,
+.recarga .section-image::after,
+.recarga .section-image::before {
+  position: absolute;
+}
+
+.recauda .section-image::after,
+.recauda .section-image::before {
+  width: 90px;
+}
+
+.recarga .section-image::after,
+.recarga .section-image::before {
+  width: 50px;
+}
+
+.recauda .section-image::after {
+  content: url('../images/circle-shape.svg');
+  bottom: 100px;
+  right: 30px;
+  animation: rotatedelement 5s linear infinite;
+}
+
+.recauda .section-image::before {
+  content: url('../images/triangle-shape.svg');
+  top: 20px;
+  right: 20px;
+  animation: movedelement 5s linear infinite;
+}
+
+.recarga .section-image::after {
+  content: url('../images/circle-shape-green.svg');
+  top: 90px;
+  right: 140px;
+  animation: rotatedelement 5s linear infinite;
+}
+
+.recarga .section-image::before {
+  content: url('../images/close-shape-green.svg');
+  bottom: 20px;
+  left: 50px;
+  animation: movedelement 5s linear infinite;
+}
+
 .absolute-button-wrapper {
   position: absolute;
   bottom: -70px;
@@ -1035,16 +1080,26 @@ footer .footer-nav .nav-item::after {
 
 .social-nav a {
   background-color: hsl(var(--white-color));
+  border: 2px solid hsl(var(--white-color));
   border-radius: 50%;
   display: grid;
   place-items: center;
   height: 1.875rem;
   width: 1.875rem;
   text-decoration: none;
+  transition: background .5s ease-in-out;
 }
 
 .social-nav a>i {
   color: hsl(var(--primary-color));
+}
+
+.social-nav a:is(:hover, :focus) {
+  background-color: transparent;
+}
+
+.social-nav a:is(:hover, :focus)>i {
+  color: hsl(var(--white-color));
 }
 
 /* ------------ Services ------------ */
