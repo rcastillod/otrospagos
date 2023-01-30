@@ -631,49 +631,54 @@ footer .footer-nav .nav-item::after {
 
 }
 
-.recauda .section-image::after,
-.recauda .section-image::before,
-.recarga .section-image::after,
-.recarga .section-image::before {
-  position: absolute;
-}
 
-.recauda .section-image::after,
-.recauda .section-image::before {
-  width: 90px;
-}
+@media (min-width: 768px) {
 
-.recarga .section-image::after,
-.recarga .section-image::before {
-  width: 50px;
-}
+  .recauda .section-image::after,
+  .recauda .section-image::before,
+  .recarga .section-image::after,
+  .recarga .section-image::before {
+    position: absolute;
+  }
 
-.recauda .section-image::after {
-  content: url('../images/circle-shape.svg');
-  bottom: 100px;
-  right: 30px;
-  animation: rotatedelement 5s linear infinite;
-}
+  .recauda .section-image::after,
+  .recauda .section-image::before {
+    width: 90px;
+  }
 
-.recauda .section-image::before {
-  content: url('../images/triangle-shape.svg');
-  top: 20px;
-  right: 20px;
-  animation: movedelement 5s linear infinite;
-}
+  .recarga .section-image::after,
+  .recarga .section-image::before {
+    width: 50px;
+  }
 
-.recarga .section-image::after {
-  content: url('../images/circle-shape-green.svg');
-  top: 90px;
-  right: 140px;
-  animation: rotatedelement 5s linear infinite;
-}
+  .recauda .section-image::after {
+    content: url('../images/circle-shape.svg');
+    bottom: 100px;
+    right: 30px;
+    animation: rotatedelement 5s linear infinite;
+  }
 
-.recarga .section-image::before {
-  content: url('../images/close-shape-green.svg');
-  bottom: 20px;
-  left: 50px;
-  animation: movedelement 5s linear infinite;
+  .recauda .section-image::before {
+    content: url('../images/triangle-shape.svg');
+    top: 20px;
+    right: 20px;
+    animation: movedelement 5s linear infinite;
+  }
+
+  .recarga .section-image::after {
+    content: url('../images/circle-shape-green.svg');
+    top: 90px;
+    right: 140px;
+    animation: rotatedelement 5s linear infinite;
+  }
+
+  .recarga .section-image::before {
+    content: url('../images/close-shape-green.svg');
+    bottom: 20px;
+    left: 50px;
+    animation: movedelement 5s linear infinite;
+  }
+
 }
 
 .absolute-button-wrapper {
