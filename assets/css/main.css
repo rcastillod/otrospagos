@@ -1107,6 +1107,11 @@ footer .footer-nav .nav-item::after {
   color: hsl(var(--white-color));
 }
 
+/* ---------- Banner slide ---------- */
+.hero-slide img {
+  width: 100%;
+}
+
 /* ------------ Services ------------ */
 .hero-content .services {
   display: grid;
@@ -1145,6 +1150,17 @@ footer .footer-nav .nav-item::after {
   .hero-content .service-icon {
     height: 6.25rem;
     width: 6.25rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .hero-content .services {
+    row-gap: 2.25rem;
+  }
+
+  .hero-content .service-icon {
+    height: 5rem;
+    width: 5rem;
   }
 }
 

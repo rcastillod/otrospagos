@@ -33,6 +33,21 @@ var swiper = new Swiper(".hero-slide", {
   effect: "fade",
 });
 
+// Apply height to hero-content based on hero-slide
+const bannerSlide = document.querySelector('.hero-slide')
+const heroContent = document.querySelector('.hero-content')
+// Implement matchMedia to only apply the height in screen > 1200px
+const windowSize = window.matchMedia('(min-width: 1200px)')
+
+const windowResize = (size) => {
+  if (size.matches) heroContent.style.height = bannerSlide.offsetHeight + 'px'
+}
+
+// Run the function on screen resize
+windowSize.addEventListener('change', windowResize)
+// Initial check to se whether the media query is satisfied
+//windowResize(windowSize)
+
 /* --------- Pagos carousel --------- */
 var swiper = new Swiper(".pagos-carousel", {
   slidesPerView: 3,
