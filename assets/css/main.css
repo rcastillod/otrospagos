@@ -347,6 +347,12 @@ form select.form-select {
   stroke: hsl(var(--white-color));
 }
 
+.button.button-primary:is(:hover, :focus) {
+  background-color: transparent;
+  border-color: hsl(var(--primary-color) / .1);
+  color: hsl(var(--primary-color));
+}
+
 .button.button-secondary {
   border-color: hsl(var(--secondary-color));
   color: hsl(var(--primary-color));
@@ -400,7 +406,7 @@ form select.form-select {
 }
 
 .button.button-primary::before {
-  background: hsl(var(--primary-color));
+  background: hsl(var(--primary-color) / .1);
 }
 
 .button.button-secondary::before {
