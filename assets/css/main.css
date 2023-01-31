@@ -252,7 +252,7 @@ form select.form-select {
   font-family: var(--ff-semibold);
   font-size: var(--fs-section-title);
   font-weight: var(--fw-bold);
-  letter-spacing: .325rem;
+  letter-spacing: .225rem;
   text-transform: uppercase;
 }
 
