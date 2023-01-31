@@ -61,7 +61,7 @@ var swiper = new Swiper(".pagos-carousel", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 7500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   navigation: {
