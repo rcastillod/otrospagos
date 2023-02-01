@@ -1159,7 +1159,7 @@ footer .footer-nav .nav-item::after {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1460px) {
   .hero-content .services {
     row-gap: 2.25rem;
   }
