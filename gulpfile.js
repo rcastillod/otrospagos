@@ -1,30 +1,23 @@
-/**
-*   Gulp with TailwindCSS - An CSS Utility framework                                
-*   Author : Manjunath G                                              
-*   URL : manjumjn.com                                                 
-*   Twitter : twitter.com/manju_mjn                                    
-**/
-
 /*
   Usage:
-  1. npm install //To install all dev dependencies of package
-  2. npm run dev //To start development and server for live preview
-  3. npm run prod //To generate minifed files for live server
+  1. npm install // To install all dev dependencies of package
+  2. npm run dev // To start development and server for live preview
+  3. npm run prod // To generate minifed files for live server
 */
 
 const { src, dest, task, watch, series, parallel } = require('gulp');
-const del = require('del'); //For Cleaning build/dist for fresh export
-const options = require("./config"); //paths and other options from config.js
+const del = require('del'); // For Cleaning build/dist for fresh export
+const options = require("./config"); // paths and other options from config.js
 const browserSync = require('browser-sync').create();
 
-const sass = require('gulp-sass')(require('sass')); //For Compiling SASS files
-const postcss = require('gulp-postcss'); //For Compiling tailwind utilities with tailwind config
-const autoprefixer = require('autoprefixer'); //For Compiling tailwind utilities with tailwind config
-const concat = require('gulp-concat'); //For Concatinating js,css files
-const cleanCSS = require('gulp-clean-css');//To Minify CSS files
+const sass = require('gulp-sass')(require('sass')); // For Compiling SASS files
+const postcss = require('gulp-postcss'); // For Compiling tailwind utilities with tailwind config
+const autoprefixer = require('autoprefixer'); // For parses the CSS and adds vendor prefixes
+const concat = require('gulp-concat'); // For Concatinating js,css files
+const cleanCSS = require('gulp-clean-css');// To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 
-//Note : Webp still not supported in major browsers including forefox
+//Note : Webp still not supported in major browsers including firefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
 //const replace = require('gulp-replace'); //For Replacing img formats to webp in html
 const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P 
@@ -33,7 +26,7 @@ const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P
 function livePreview(done) {
   browserSync.init({
     server: {
-      baseDir: options.paths.dist.base
+      baseDir: options.paths.src.base
     },
     port: options.config.port || 5000
   });
