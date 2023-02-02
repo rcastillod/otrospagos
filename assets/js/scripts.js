@@ -22,13 +22,6 @@ navTriggerOpen.addEventListener('click', activeMenuPanel)
 navTriggerClose.addEventListener('click', deactivateMenuPanel)
 mobilePanelOverlay.addEventListener('click', deactivateMenuPanel)
 
-/* --------- AOS animations --------- */
-AOS.init({
-  // Global settings:
-  duration: 1000, // values from 0 to 3000, with step 50ms
-  once: true
-});
-
 /* ---------- Banner slider --------- */
 var swiper = new Swiper(".hero-slide", {
   spaceBetween: 30,

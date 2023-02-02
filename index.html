@@ -544,10 +544,18 @@
 
   <!-- JS -->
   <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/fslightbox.js"></script>
+  <script src="assets/js/swiper-bundle.min.js" defer></script>
+  <script src="assets/js/fslightbox.js" defer></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/scripts.js" defer></script>
+  <script>
+    /* --------- AOS animations --------- */
+    AOS.init({
+      // Global settings:
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      once: true
+    });
+  </script>
 </body>
 
 </html>
