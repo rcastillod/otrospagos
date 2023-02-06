@@ -18,8 +18,8 @@ const cleanCSS = require('gulp-clean-css');// To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 
 //Note : Webp still not supported in major browsers including firefox
-//const webp = require('gulp-webp'); //For converting images to WebP format
-//const replace = require('gulp-replace'); //For Replacing img formats to webp in html
+const webp = require('gulp-webp'); //For converting images to WebP format
+const replace = require('gulp-replace'); //For Replacing img formats to webp in html
 const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P 
 
 //Load Previews on Browser on dev
@@ -46,13 +46,38 @@ function devHTML() {
 }
 
 function devStyles() {
-  return src(`${options.paths.src.css}/main.css`)
+  return src(`${options.paths.src.css}/**/*.css`)
     .pipe(sass().on('error', sass.logError))
     .pipe(dest(options.paths.src.css))
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(dest(options.paths.dist.css));
 }
+
+function devScripts() {
+  return src(
+    `${options.paths.src.js}/**/*.js`,
+  )
+    .pipe(dest(options.paths.dist.js));
+}
+
+function devImages() {
+  return src(`${options.paths.src.img}/**/*.svg`).pipe(dest(options.paths.dist.img));
+}
+
+function devImagesWebp() {
+  return src(
+    `${options.paths.src.img}/**/*.{jpg,png}`)
+    .pipe(webp())
+    .pipe(dest(options.paths.dist.img));
+}
+
+function replaceImageExt() {
+  return src(`${options.paths.src.base}/**/*.html`)
+    .pipe(replace('.jpg', '.webp'))
+    .pipe(replace('.png', '.webp'))
+    .pipe(dest(options.paths.dist.base));
+};
 
 function watchFiles() {
   watch(`${options.paths.src.base}/**/*.html`, series(devHTML, previewReload));
@@ -95,7 +120,7 @@ function buildFinish(done) {
 
 exports.default = series(
   devClean, // Clean Dist Folder
-  parallel(devStyles, devHTML), //Run All tasks in parallel
+  parallel(devStyles, devScripts, devImages, devImagesWebp, replaceImageExt, devHTML), //Run All tasks in parallel
   livePreview, // Live Preview Build
   watchFiles // Watch for Live Changes
 );

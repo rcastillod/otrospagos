@@ -8,19 +8,19 @@ module.exports = {
 			base: ".",
 			css: "./assets/css",
 			js: "./assets/js",
-			img: "./assets/img"
+			img: "./assets/images"
 		},
 		dist: {
 			base: "./dist",
-			css: "./dist/css",
-			js: "./dist/js",
-			img: "./dist/img"
+			css: "./dist/assets/css",
+			js: "./dist/assets/js",
+			img: "./dist/assets/images"
 		},
 		build: {
 			base: "./build",
 			css: "./build/css",
 			js: "./build/js",
-			img: "./build/img"
+			img: "./build/images"
 		}
 	}
 }
