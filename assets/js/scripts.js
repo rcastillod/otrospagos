@@ -46,7 +46,7 @@ const windowResize = (size) => {
 // Run the function on screen resize
 windowSize.addEventListener('change', windowResize)
 // Initial check to se whether the media query is satisfied
-//windowResize(windowSize)
+windowResize(windowSize)
 
 /* --------- Pagos carousel --------- */
 var swiper = new Swiper(".pagos-carousel", {
