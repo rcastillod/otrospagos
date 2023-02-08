@@ -2,6 +2,7 @@
 /* ---------- Fonts import ---------- */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
 
+/* ---------- Custom Fonts ---------- */
 @font-face {
   font-family: "omnessemibolditalic";
   src: url("../fonts/omnes_semibolditalic-webfont.woff2") format("woff2"), url("../fonts/omnes_semibolditalic-webfont.woff") format("woff");
@@ -101,6 +102,7 @@ section {
   position: relative;
 }
 
+/* Swiper slider navigation */
 .next,
 .prev {
   position: absolute;
@@ -248,6 +250,8 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
+
+/* Section title */
 .section-title {
   font-family: var(--ff-semibold);
   font-size: var(--fs-section-title);
@@ -256,6 +260,7 @@ form select.form-select {
   text-transform: uppercase;
 }
 
+/* Section subtitle */
 .section-subtitle {
   font-family: var(--ff-semibold);
   font-size: var(--fs-section-subtitle);
@@ -264,6 +269,7 @@ form select.form-select {
   text-transform: uppercase;
 }
 
+/* Section title small variation */
 .section-title-small {
   font-weight: 600;
   letter-spacing: 1px;
@@ -271,6 +277,7 @@ form select.form-select {
   text-transform: uppercase;
 }
 
+/* Buttons */
 .button {
   background-color: hsl(var(--white-color));
   border: 3px solid;
@@ -428,6 +435,7 @@ form select.form-select {
   background: hsl(var(--white-color));
 }
 
+/* Color */
 .color-primary {
   color: hsl(var(--primary-color));
 }
@@ -440,6 +448,7 @@ form select.form-select {
   color: hsl(var(--accent-color));
 }
 
+/* Background */
 .bg-primary-clr {
   background-color: hsl(var(--primary-color));
 }
@@ -456,11 +465,13 @@ form select.form-select {
   background-color: hsl(var(--primary-color-tint));
 }
 
+/* Font family */
 .ff-paragraph {
   font-family: var(--paragraph-font);
   font-size: var(--fs-section-paragraph);
 }
 
+/* Font weight */
 .ff-medium {
   font-family: var(--body-font);
 }
@@ -477,6 +488,7 @@ form select.form-select {
   font-family: var(--ff-semibold-italic);
 }
 
+/* Section padding */
 .py-15 {
   padding-block: 3.125rem;
 }
@@ -487,10 +499,12 @@ form select.form-select {
   }
 }
 
+/* Shape animation */
 .anim-shape-01 {
   animation: movedelement 5s linear infinite;
 }
 
+/* Screen reader only */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -506,12 +520,13 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 /*                                 GLOBAL                                     */
 /* -------------------------------------------------------------------------- */
-/* ------------- header ------------- */
+
+/* Header */
 header {
   background-color: hsl(var(--white-color));
 }
 
-/* ------------- Footer ------------- */
+/* Footer */
 footer {
   background-color: hsl(var(--primary-color));
 }
@@ -575,6 +590,7 @@ footer .footer-nav .nav-item::after {
 /* -------------------------------------------------------------------------- */
 /*                                 LAYOUTS                                    */
 /* -------------------------------------------------------------------------- */
+
 /* Hero section */
 .hero-content {
   background-image: linear-gradient(135deg, hsl(var(--gradient-color-from)) 60%, hsl(var(--gradient-color-to)));
