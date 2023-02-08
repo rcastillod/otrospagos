@@ -41,24 +41,36 @@
 
           <div class="col-9 d-flex column-gap-4 column-gap-md-5 align-items-center justify-content-end">
             <!-- Search form -->
-            <form class="search-form" action="" role="search" method="post">
-              <label for="nav-search" class="d-none">
-                <span class="sr-only">Buscar</span>
-              </label>
-              <!-- Search input -->
-              <div class="search-input">
-                <input id="nav-search" type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
-                <button type="submit" class="search-button">
+            <div class="search-from-wrapper position-relative">
+              <form class="search-form" action="" role="search" method="post">
+                <label for="nav-search" class="d-none">
                   <span class="sr-only">Buscar</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.64 21.64">
-                    <g>
-                      <circle cx="8.72" cy="8.72" r="7.62" />
-                      <line x1="14.11" y1="14.11" x2="20.54" y2="20.54" />
-                    </g>
-                  </svg>
-                </button>
+                </label>
+                <!-- Search input -->
+                <div class="search-input">
+                  <input id="nav-search" type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
+                  <button type="submit" class="search-button">
+                    <span class="sr-only">Buscar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.64 21.64">
+                      <g>
+                        <circle cx="8.72" cy="8.72" r="7.62" />
+                        <line x1="14.11" y1="14.11" x2="20.54" y2="20.54" />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+              <div class="search-form-result-wrapper">
+                <a href="#" class="service-result">Inmobiliaria</a>
+                <ul class="service-list-result">
+                  <li><a href="#">Alterra - Edificio Faro Norte Torre A</a></li>
+                  <li><a href="#">Alterra - Edificio Altos de Huayquique</a></li>
+                  <li><a href="#">Alterra - Edificio Condominio Casas</a></li>
+                  <li><a href="#">Alterra - Edificio Element</a></li>
+                  <li><a href="#">Alterra - Edificio Entre Lomas</a></li>
+                </ul>
               </div>
-            </form>
+            </div>
             <!-- Navigation -->
             <nav class="header-nav d-none d-lg-block" role="navigation">
               <ul class="nav d-flex">

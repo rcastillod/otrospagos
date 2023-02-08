@@ -101,3 +101,19 @@ var swiper = new Swiper(".services-carousel", {
     }, false)
   })
 })()
+
+/* ----------- Search bar (demo purpose only)----------- */
+const searchForm = document.querySelector('.search-form')
+const searchInput = document.querySelector('.search-input')
+
+searchInput.addEventListener('click', () => {
+  searchForm.classList.add('results')
+})
+
+document.addEventListener("click", (event) => {
+  const isClickInside = searchInput.contains(event.target);
+
+  if (!isClickInside) {
+    searchForm.classList.remove('results')
+  }
+});

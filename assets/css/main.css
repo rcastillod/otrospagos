@@ -238,7 +238,7 @@ form select.form-select {
 }
 
 .ot-alert-info {
-  background-color: hsl(var(--secondary-color) / .3);
+  background-color: hsl(var(--secondary-color)/0.3);
   color: hsl(var(--text-color));
 }
 
@@ -250,7 +250,6 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 /*                               UTILITY CLASSES                              */
 /* -------------------------------------------------------------------------- */
-
 /* Section title */
 .section-title {
   font-family: var(--ff-semibold);
@@ -520,7 +519,6 @@ form select.form-select {
 /* -------------------------------------------------------------------------- */
 /*                                 GLOBAL                                     */
 /* -------------------------------------------------------------------------- */
-
 /* Header */
 header {
   background-color: hsl(var(--white-color));
@@ -590,7 +588,6 @@ footer .footer-nav .nav-item::after {
 /* -------------------------------------------------------------------------- */
 /*                                 LAYOUTS                                    */
 /* -------------------------------------------------------------------------- */
-
 /* Hero section */
 .hero-content {
   background-image: linear-gradient(135deg, hsl(var(--gradient-color-from)) 60%, hsl(var(--gradient-color-to)));
@@ -902,6 +899,59 @@ footer .footer-nav .nav-item::after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Search form result */
+.search-form-result-wrapper {
+  background-color: hsl(var(--white-color));
+  opacity: 0;
+  padding: .9375rem;
+  position: absolute;
+  top: 20px;
+  z-index: 99;
+  transform: translateY(10px);
+  transition: transform 300ms ease-in-out;
+}
+
+.search-form-result-wrapper a {
+  text-decoration: none;
+}
+
+.search-form-result-wrapper .service-result {
+  border-bottom: 2px solid hsl(var(--primary-color));
+  color: hsl(var(--primary-color));
+  display: block;
+  font-family: var(--ff-semibold);
+  font-size: 0.875rem;
+  padding-block-end: .3125rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.search-form-result-wrapper .service-list-result {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form-result-wrapper .service-list-result li:not(:last-child) {
+  border-bottom: 1px solid hsl(var(--primary-color));
+}
+
+.search-form-result-wrapper .service-list-result a {
+  color: hsl(var(--grey-color));
+  display: block;
+  font-family: var(--paragraph-font);
+  font-size: 0.875rem;
+  font-weight: var(--fw-light);
+  padding-block: .3125rem;
+}
+
+.search-form.loading+.search-form-result-wrapper,
+.search-form.results+.search-form-result-wrapper {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
 
 /* -------- Header navigation ------- */
 .nav {
