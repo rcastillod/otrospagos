@@ -25,6 +25,7 @@
 
 <body>
 
+  <!-- Header -->
   <header>
     <div class="header-wrapper py-4">
       <div class="container-lg">
@@ -43,6 +44,7 @@
               <label for="nav-search" class="d-none">
                 <span class="sr-only">Buscar</span>
               </label>
+              <!-- Search input -->
               <div class="search-input">
                 <input id="nav-search" type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
                 <button type="submit" class="search-button">
@@ -98,12 +100,15 @@
 
   <main>
 
+    <!-- Heading section -->
     <section class="py-5 inner-page-hero has-image">
       <div class="container">
         <div class="inner-page-wrapper">
           <div class="row">
             <div class="col-8 col-sm-6">
+              <!-- Section title -->
               <h2 class="section-title mb-sm-5 color-primary">Queremos <br> contar contigo</h2>
+              <!-- Section paragraph -->
               <p class="ff-paragraph d-none d-md-block">Confía en OtrosPagos.com, súmate a <br
                   class="d-none d-lg-block">
                 nosotros. Entréganos aquí tus
@@ -122,11 +127,13 @@
       </div>
     </section>
 
+    <!-- Form section -->
     <section class="pt-5 inner-page-section">
       <div class="container">
         <div class="inner-page-wrapper">
           <div class="row mb-5 d-flex d-md-none">
             <div class="col-8 col-sm-6">
+              <!-- Section paragraph -->
               <p class="ff-paragraph">Confía en OtrosPagos.com, súmate a <br class="d-none d-lg-block">
                 nosotros. Entréganos aquí tus
                 antecedentes <br class="d-none d-lg-block"> y te contactaremos a la brevedad</p>
@@ -137,6 +144,8 @@
               <div class="ff-paragraph section-title-small color-primary">Contáctanos</div>
             </div>
           </div>
+
+          <!-- Contact form -->
           <form class="row g-4 needs-validation" novalidate>
 
             <!-- ---- Success message alert ---- -->
@@ -144,6 +153,7 @@
               Tu mensaje se ha enviado con éxito!
             </div>
 
+            <!-- Form group - nombres -->
             <div class="col-md-6">
               <label for="nombres" class="form-label sr-only">Nombres <span>(requerido)</span></label>
               <input type="text" class="form-control" id="nombres" placeholder="Nombres" required>
@@ -151,6 +161,7 @@
                 Por favor escribe tus nombres.
               </div>
             </div>
+            <!-- Form group - apellidos -->
             <div class="col-md-6">
               <label for="apellidos" class="form-label sr-only">Apellidos <span>(requerido)</span></label>
               <input type="text" class="form-control" id="apellidos" placeholder="Apellidos" required>
@@ -158,10 +169,12 @@
                 Por favor escribe tus apellidos.
               </div>
             </div>
+            <!-- Form group - teléfono -->
             <div class="col-md-6">
               <label for="telefono" class="form-label sr-only">Teléfono</label>
               <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
             </div>
+            <!-- Form group - email -->
             <div class="col-md-6">
               <label for="email" class="form-label sr-only">Email <span>(requerido)</span></label>
               <input type="email" class="form-control" id="email" placeholder="Email" required>
@@ -169,6 +182,7 @@
                 Por favor ingresa tu email.
               </div>
             </div>
+            <!-- Form group - empresa -->
             <div class="col-12">
               <label for="nombre_empresa" class="form-label sr-only">Nombre, Empresa o institución
                 <span>(requerido)</span></label>
@@ -178,6 +192,7 @@
                 Por favor ingresa el nombre de tu empresa o institución.
               </div>
             </div>
+            <!-- Form group - dirección -->
             <div class="col-md-6">
               <label for="direccion" class="form-label sr-only">Dirección <span>(requerido)</span></label>
               <input type="text" class="form-control" id="direccion" placeholder="Dirección" required>
@@ -185,6 +200,7 @@
                 Por favor ingresa tu dirección.
               </div>
             </div>
+            <!-- Form group - regiones -->
             <div class="col-md-6">
               <label for="direccion" class="form-label sr-only">Región <span>(requerido)</span></label>
               <select class="form-select" aria-label="Selector de región" required>
@@ -213,6 +229,7 @@
                 Por favor selecciona tu región.
               </div>
             </div>
+            <!-- Form group - servicio -->
             <div class="col-12">
               <label for="servicios" class="form-label sr-only">Describe aquí el servicio que necesitas
                 <span>(requerido)</span></label>
@@ -222,6 +239,7 @@
                 Por favor escribe el servicio que necesitas.
               </div>
             </div>
+            <!-- Form group - submit -->
             <div class="col-12 mt-5 d-flex justify-content-end">
               <button type="submit" class="button button-secondary small">Continuar</button>
             </div>
@@ -232,11 +250,14 @@
 
   </main>
 
+
+  <!-- Footer -->
   <footer class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="footer-wrapper d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <!-- Footer nav -->
             <nav class="footer-nav mb-5 mb-lg-0">
               <ul class="nav d-flex">
                 <li class="nav-item">
@@ -253,6 +274,7 @@
                 </li>
               </ul>
             </nav>
+            <!-- Footer social -->
             <nav class="social-nav">
               <ul class="d-flex column-gap-4 p-0 ps-lg-5 mb-0">
                 <li class=" social-nav-item">
@@ -281,6 +303,7 @@
     <div class="logo-mobile my-4">
       <img src="assets/images/logo-white.svg" alt="Otros Pagos" width="100" role="image">
     </div>
+    <!-- Mobile nav -->
     <nav role="navigation">
       <ul class="nav d-flex flex-column">
         <li class="nav-item-mobile">
@@ -293,6 +316,7 @@
     </nav>
     <div class="mt-5">
       <p class="text-light text-center follow">Síguenos</p>
+      <!-- Mobile social -->
       <nav role="navigation">
         <ul class="nav d-flex column-gap-3 justify-content-center social-nav">
           <li>

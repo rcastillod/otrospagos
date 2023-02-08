@@ -25,6 +25,7 @@
 
 <body class="bg-primary-clr-100">
 
+  <!-- Header -->
   <header>
     <div class="header-wrapper py-4">
       <div class="container-lg">
@@ -43,6 +44,7 @@
               <label for="nav-search" class="d-none">
                 <span class="sr-only">Buscar</span>
               </label>
+              <!-- Search input -->
               <div class="search-input">
                 <input id="nav-search" type="text" name="s" value="" placeholder="Buscar" class="py-1 px-3 pe-4">
                 <button type="submit" class="search-button">
@@ -98,18 +100,23 @@
 
   <main>
 
+    <!-- Frame section -->
     <div class="pt-5 inner-page-section">
       <div class="container">
         <div class="inner-page-wrapper">
           <div class="bg-white py-5 px-3 py-md-5 px-md-4 p-lg-5">
             <div class="row">
               <div class="col-12 col-lg-6">
+                <!-- Section title -->
                 <h3 class="section-title mb-3 color-primary">¡Otro pago realizado con éxito!</h3>
                 <div>
                   <div class="ff-paragraph mb-3 fw-bold">El comprobante fue enviado a:<br> maga@somosreal.cl</div>
+                  <!-- Section paragraph -->
                   <p class="ff-paragraph" style="--fs-section-paragraph: 1rem">¿Enviar una copia del comprobante?</p>
+                  <!-- Email copy form -->
                   <form class="needs-validation" action="" method="post" novalidate>
                     <div class="d-flex gap-4">
+                      <!-- Form group - email -->
                       <div>
                         <label for="emailcopia" class="form-label sr-only">Email <span>(requerido)</span></label>
                         <input type="email" class="form-control" id="emailcopia" placeholder="E-mail" required>
@@ -117,62 +124,73 @@
                           Por favor ingresa un email.
                         </div>
                       </div>
+                      <!-- Form group - submit -->
                       <button type="submit" class="button button-secondary small">Enviar</button>
                     </div>
                   </form>
                 </div>
               </div>
               <div class="col-12 col-lg-6 text-end position-relative d-none d-lg-block">
+                <!-- Shape animation -->
                 <img class="position-absolute top-50 anim-shape-01" src="assets/images/angles-shape.svg" width="50"
                   style="left: 65px">
                 <img src="assets/images/success-payment-ws.png" alt="Pago exitoso">
               </div>
             </div>
+            <!-- Payment review -->
             <div class="row py-4 mt-5 border-top border-bottom border-dark">
               <div class="col-12">
                 <div class="row gy-3 gx-5 ff-paragraph" style="--fs-section-paragraph: 1rem">
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Comprobante nº:</p>
                       <p class="mb-0">625478731002565282</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Fecha:</p>
                       <p class="mb-0">06-09-2022</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Código MP:</p>
                       <p class="mb-0">0278905510</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Medio de pago:</p>
                       <p class="mb-0">Webpay</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Tipo de pago:</p>
                       <p class="mb-0">Redcompra</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Tipo de cuota:</p>
                       <p class="mb-0">Debito</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Valor cuota:</p>
                       <p class="mb-0">-</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12 col-md-6">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Número de cuotas:</p>
@@ -185,12 +203,14 @@
             <div class="row py-4 border-bottom border-dark">
               <div class="col-12">
                 <div class="row gy-3 ff-paragraph" style="--fs-section-paragraph: 1rem">
+                  <!-- Review item -->
                   <div class="col-12">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Monto pagado:</p>
                       <p class="mb-0">$10.-</p>
                     </div>
                   </div>
+                  <!-- Review item -->
                   <div class="col-12">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Cargo por servicio:</p>
@@ -203,6 +223,7 @@
             <div class="row py-3">
               <div class="col-12">
                 <div class="row ff-paragraph fw-bold" style="--fs-section-paragraph: 1rem">
+                  <!-- Review item -->
                   <div class="col-12">
                     <div class="g-col-6 d-flex justify-content-between">
                       <p class="mb-0">Monto total</p>
@@ -214,7 +235,9 @@
             </div>
             <div class="row mt-5">
               <div class="table-responsive">
+                <!-- Payment review table -->
                 <table class="table ot-payment-table">
+                  <!-- Table head -->
                   <thead>
                     <tr>
                       <th scope="col">Convenio</th>
@@ -225,6 +248,7 @@
                       <th scope="col">Total</th>
                     </tr>
                   </thead>
+                  <!-- Table body -->
                   <tbody>
                     <tr>
                       <td>Colegio Modelo Valparaíso</td>
@@ -237,6 +261,7 @@
                   </tbody>
                 </table>
               </div>
+              <!-- Payment totals -->
               <div class="d-flex justify-content-end gap-5 ff-paragraph">
                 <div>Total:</div>
                 <div>$10.-</div>
@@ -252,11 +277,13 @@
 
   </main>
 
+  <!-- Footer -->
   <footer class="py-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="footer-wrapper d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <!-- Footer nav -->
             <nav class="footer-nav mb-5 mb-lg-0">
               <ul class="nav d-flex">
                 <li class="nav-item">
@@ -273,6 +300,7 @@
                 </li>
               </ul>
             </nav>
+            <!-- Footer social -->
             <nav class="social-nav">
               <ul class="d-flex column-gap-4 p-0 ps-lg-5 mb-0">
                 <li class=" social-nav-item">
@@ -301,6 +329,7 @@
     <div class="logo-mobile my-4">
       <img src="assets/images/logo-white.svg" alt="Otros Pagos" width="100" role="image">
     </div>
+    <!-- Mobile nav -->
     <nav role="navigation">
       <ul class="nav d-flex flex-column">
         <li class="nav-item-mobile">
@@ -313,6 +342,7 @@
     </nav>
     <div class="mt-5">
       <p class="text-light text-center follow">Síguenos</p>
+      <!-- Mobile social -->
       <nav role="navigation">
         <ul class="nav d-flex column-gap-3 justify-content-center social-nav">
           <li>
