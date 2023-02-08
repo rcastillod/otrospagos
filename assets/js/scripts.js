@@ -2,18 +2,22 @@
 const preloader = document.getElementById('preloader');
 
 if (preloader) {
-  const fadeOutEffect = setInterval(() => {
-    if (!preloader.style.opacity) {
-      preloader.style.opacity = 1;
-    }
-    if (preloader.style.opacity > 0) {
-      preloader.style.opacity = 0;
-    } else {
-      clearInterval(fadeEffect);
-    }
-  }, 2700);
+
+  const fadeOutEffect = () => {
+    setInterval(() => {
+      if (!preloader.style.opacity) {
+        preloader.style.opacity = 1;
+      }
+      if (preloader.style.opacity > 0) {
+        preloader.style.opacity = 0;
+      } else {
+        clearInterval();
+      }
+    }, 2700)
+  }
 
   window.addEventListener('load', fadeOutEffect);
+
 }
 
 /* ----------- Nav trigger ---------- */
