@@ -846,9 +846,12 @@ footer .footer-nav .nav-item::after {
 /*                                 COMPONENTS                                 */
 /* -------------------------------------------------------------------------- */
 /* ----------- Search form ---------- */
-.search-form-wrapper,
-.search-form {
-  width: 15.625rem;
+@media (min-width: 768px) {
+
+  .search-form-wrapper,
+  .search-form {
+    width: 15.625rem;
+  }
 }
 
 .search-input {
