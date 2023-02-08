@@ -1,5 +1,11 @@
 /* ------------ Preloader ----------- */
 const preloader = document.getElementById('preloader');
+const preloaderLogo = document.getElementById('preloaderLogo')
+let preloaderTime = 2700
+
+if (preloaderLogo.classList.contains('preloader-logo--only')) {
+  preloaderTime = 2000
+}
 
 if (preloader) {
 
@@ -10,10 +16,11 @@ if (preloader) {
       }
       if (preloader.style.opacity > 0) {
         preloader.style.opacity = 0;
+        preloader.style.zIndex = -1;
       } else {
         clearInterval();
       }
-    }, 2700)
+    }, preloaderTime)
   }
 
   window.addEventListener('load', fadeOutEffect);

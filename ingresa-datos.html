@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -98,7 +99,7 @@
     </div>
   </header>
 
-  <main>
+  <main data-aos="fade-in" data-aos-delay="2300">
 
     <!-- Services carousel section -->
     <section class="py-5 inner-page-hero">
@@ -469,11 +470,52 @@
     </div>
   </div>
 
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <svg id="preloaderLogo" class="preloader-logo--only" xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 64.93" shape-rendering="geometricPrecision"
+      text-rendering="geometricPrecision" width="100">
+      <g transform="translate(4.340024 4.3564)">
+        <g>
+          <g id="shape_01" transform="translate(35.254999,14.550756) rotate(0)">
+            <path
+              d="M36,19.94c2.263494,2.110171,3.549186,5.065452,3.55,8.16.01156.334862-.011901.670015-.07,1L51,17.52L37.26,3.75c-4.865099-4.855096-12.692044-5.013839-17.75-.36Z"
+              transform="translate(-35.254999,-14.550756)" fill="#c6f000" />
+          </g>
+          <g id="shape_02" transform="translate(14.540756,21.070001) rotate(0)">
+            <path
+              d="M20.15,20.08v0c2.125545-2.110735,5.004531-3.287521,8-3.27.311642-.011515.623593.011965.93.07L17.52,5.31L3.75,19.08c-4.855096,4.865099-5.013839,12.692044-.36,17.75Z"
+              transform="translate(-14.540756,-21.070001)" fill="#c6f000" />
+          </g>
+          <g id="shape_03" transform="translate(21.070001,41.651645) rotate(0)">
+            <path
+              d="M20.22,36.2v0c-2.18596-2.127294-3.416296-5.049793-3.41-8.1-.01223-.334873.011235-.670097.07-1L5.31,38.68L19.08,52.46c4.867809,4.852227,12.694694,5.00656,17.75.35Z"
+              transform="translate(-21.070001,-41.651645)" fill="#c6f000" />
+          </g>
+          <g id="shape_04" transform="translate(41.72303,35.185) rotate(0)">
+            <path
+              d="M52.88,19.37L36.12,36.2v0c-2.122774,2.082886-4.976024,3.252898-7.95,3.26-.334873.01223-.670097-.011235-1-.07L38.75,51L52.53,37.19c4.856051-4.893706,5.010147-12.739388.35-17.82Z"
+              transform="translate(-41.72303,-35.185)" fill="#c6f000" />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+
   <!-- JS -->
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/fslightbox.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+    /* --------- AOS animations --------- */
+    AOS.init({
+      // Global settings:
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      once: true
+    });
+  </script>
 </body>
 
 </html>

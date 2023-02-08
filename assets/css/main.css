@@ -1590,7 +1590,7 @@ footer .footer-nav .nav-item::after {
   z-index: 999;
 }
 
-#preloaderLogo {
+.preloader-logo {
   animation: logo_translate 400ms 2000ms linear 1 normal forwards;
 }
 
