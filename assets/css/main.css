@@ -1130,7 +1130,13 @@ footer .footer-nav .nav-item::after {
 }
 
 /* ---------- Banner slide ---------- */
+.hero-slide {
+  height: 100%;
+}
+
 .hero-slide img {
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 
@@ -1157,7 +1163,7 @@ footer .footer-nav .nav-item::after {
 
 .service-icon {
   background-color: hsl(var(--white-color));
-  border: 3px solid hsl(var(--primary-color));
+  border: 2px solid hsl(var(--primary-color));
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1170,6 +1176,7 @@ footer .footer-nav .nav-item::after {
 
 @media (min-width: 768px) {
   .hero-content .service-icon {
+    border: 3px solid hsl(var(--primary-color));
     height: 6.25rem;
     width: 6.25rem;
   }
