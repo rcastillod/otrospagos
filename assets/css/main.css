@@ -1186,6 +1186,10 @@ footer .footer-nav .nav-item::after {
   }
 }
 
+.carousel-wrapper .service-icon {
+  border: 2px solid hsl(var(--primary-color));
+}
+
 .service-icon>svg {
   width: 70%;
 }
