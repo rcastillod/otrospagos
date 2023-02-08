@@ -846,6 +846,7 @@ footer .footer-nav .nav-item::after {
 /*                                 COMPONENTS                                 */
 /* -------------------------------------------------------------------------- */
 /* ----------- Search form ---------- */
+.search-form-wrapper,
 .search-form {
   width: 15.625rem;
 }
