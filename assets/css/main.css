@@ -1575,3 +1575,166 @@ footer .footer-nav .nav-item::after {
 .payment-methods>div img {
   margin-bottom: 0.625rem;
 }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  background-color: hsl(var(--white-color));
+  display: grid;
+  opacity: 1;
+  place-items: center;
+  z-index: 999;
+}
+
+#preloaderLogo {
+  animation: logo_translate 400ms 2000ms linear 1 normal forwards;
+}
+
+@keyframes logo_translate {
+  100% {
+    transform: translate(-60px, -40px) scale(0.7);
+  }
+}
+
+#preloaderText {
+  animation: text_translate 400ms 2000ms linear 1 normal forwards;
+  width: 145px;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#preloaderText path {
+  fill: #3c3c3b;
+}
+
+@keyframes text_translate {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#shape_01 {
+  animation: shape_01_rotation 2000ms linear 1 normal forwards
+}
+
+@keyframes shape_01_rotation {
+  0% {
+    transform: translate(35.254999px, 14.550756px) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  25% {
+    transform: translate(35.254999px, 14.550756px) rotate(-90deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  50% {
+    transform: translate(35.254999px, 14.550756px) rotate(-180deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  75% {
+    transform: translate(35.254999px, 14.550756px) rotate(-270deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  100% {
+    transform: translate(35.254999px, 14.550756px) rotate(-360deg)
+  }
+}
+
+#shape_02 {
+  animation: shape_02_rotation 2000ms linear 1 normal forwards
+}
+
+@keyframes shape_02_rotation {
+  0% {
+    transform: translate(14.540756px, 21.070001px) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  25% {
+    transform: translate(14.540756px, 21.070001px) rotate(-90deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  50% {
+    transform: translate(14.540756px, 21.070001px) rotate(-180deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  75% {
+    transform: translate(14.540756px, 21.070001px) rotate(-270deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  100% {
+    transform: translate(14.540756px, 21.070001px) rotate(-360deg)
+  }
+}
+
+#shape_03 {
+  animation: shape_03_rotation 2000ms linear 1 normal forwards
+}
+
+@keyframes shape_03_rotation {
+  0% {
+    transform: translate(21.070001px, 41.651645px) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  25% {
+    transform: translate(21.070001px, 41.651645px) rotate(-90deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  50% {
+    transform: translate(21.070001px, 41.651645px) rotate(-180deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  75% {
+    transform: translate(21.070001px, 41.651645px) rotate(-270deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  100% {
+    transform: translate(21.070001px, 41.651645px) rotate(-360deg)
+  }
+}
+
+#shape_04 {
+  animation: shape_04_rotation 2000ms linear 1 normal forwards
+}
+
+@keyframes shape_04_rotation {
+  0% {
+    transform: translate(41.72303px, 35.185px) rotate(0deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  25% {
+    transform: translate(41.72303px, 35.185px) rotate(-90deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  50% {
+    transform: translate(41.72303px, 35.185px) rotate(-180deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  75% {
+    transform: translate(41.72303px, 35.185px) rotate(-270deg);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  }
+
+  100% {
+    transform: translate(41.72303px, 35.185px) rotate(-360deg)
+  }
+}
