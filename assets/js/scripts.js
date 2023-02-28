@@ -3,8 +3,8 @@ const preloader = document.getElementById('preloader');
 const preloaderLogo = document.getElementById('preloaderLogo')
 let preloaderTime = 2700
 
-if (preloaderLogo.classList.contains('preloader-logo--only')) {
-  preloaderTime = 2000
+if (preloader) {
+  if (preloaderLogo.classList.contains('preloader-logo--only')) preloaderTime = 2000
 }
 
 if (preloader) {
