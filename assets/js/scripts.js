@@ -148,10 +148,11 @@ document.addEventListener("click", (event) => {
 });
 
 /* ----------- Payment methods logo selected ----------- */
-const paymentMethodImage = document.querySelectorAll('.payment-methods > div > label > img')
+const paymentMethodLabel = document.querySelectorAll('.payment-methods > div > label')
 const imgModal = document.querySelector('.img-medio-seleccionado')
-paymentMethodImage.forEach(image => {
-  image.addEventListener('click', () => {
-    imgModal.src = image.src
+paymentMethodLabel.forEach(label => {
+  label.addEventListener('click', () => {
+    let paymentImageSrc = label.firstElementChild.src
+    imgModal.src = paymentImageSrc
   })
 });
