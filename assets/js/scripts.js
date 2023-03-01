@@ -146,3 +146,12 @@ document.addEventListener("click", (event) => {
     searchForm.classList.remove('results')
   }
 });
+
+/* ----------- Payment methods logo selected ----------- */
+const paymentMethodImage = document.querySelectorAll('.payment-methods > div > label > img')
+const imgModal = document.querySelector('.img-medio-seleccionado')
+paymentMethodImage.forEach(image => {
+  image.addEventListener('click', () => {
+    imgModal.src = image.src
+  })
+});
