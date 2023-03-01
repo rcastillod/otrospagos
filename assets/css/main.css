@@ -521,6 +521,19 @@ footer {
   background-color: hsl(var(--primary-color));
 }
 
+/* Modal */
+.button-close-modal {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+}
+
+.button-close-modal > i {
+  font-size: 1.625rem;
+}
+
 .footer-nav .nav-item {
   align-items: center;
   padding-block: 0.3125rem;
@@ -1475,13 +1488,15 @@ footer .footer-nav .nav-item::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-block: 1.25rem;
 }
 
 .payment-methods > div > label {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-block: 1.25rem;
 }
 
 .payment-methods > div > label > span {

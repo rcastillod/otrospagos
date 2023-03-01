@@ -118,7 +118,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="webpay">
-                    <input type="radio" name="paymethod" id="webpay">
+                    <input type="radio" name="paymethod" id="webpay" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/webpay-payment-logo.png" alt="Webpay">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -126,7 +126,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="bancoestado">
-                    <input type="radio" name="paymethod" id="bancoestado">
+                    <input type="radio" name="paymethod" id="bancoestado" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/bancoestado-payment-logo.png" alt="Banco Estado">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -134,7 +134,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="bancodechile">
-                    <input type="radio" name="paymethod" id="bancodechile">
+                    <input type="radio" name="paymethod" id="bancodechile" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/bancodechile-payment-logo.png" alt="Banco de Chile">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -142,7 +142,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="bci">
-                    <input type="radio" name="paymethod" id="bci">
+                    <input type="radio" name="paymethod" id="bci" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/bci-payment-logo.png" alt="BCI">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -150,7 +150,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="scotia">
-                    <input type="radio" name="paymethod" id="scotia">
+                    <input type="radio" name="paymethod" id="scotia" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/scotia-payment-logo.png" alt="Scotiabank">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -158,7 +158,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="fintoc">
-                    <input type="radio" name="paymethod" id="fintoc">
+                    <input type="radio" name="paymethod" id="fintoc" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/fintoc-payment-logo.png" alt="Fintoc">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -166,7 +166,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="cencosud">
-                    <input type="radio" name="paymethod" id="cencosud">
+                    <input type="radio" name="paymethod" id="cencosud" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/cencosud-payment-logo.png" alt="Cencosud">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -174,7 +174,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="lapolar">
-                    <input type="radio" name="paymethod" id="lapolar">
+                    <input type="radio" name="paymethod" id="lapolar" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/lapolar-payment-logo.png" alt="La Polar">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -182,7 +182,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="abcvisa">
-                    <input type="radio" name="paymethod" id="abcvisa">
+                    <input type="radio" name="paymethod" id="abcvisa" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/abcvisa-payment-logo.png" alt="ABC Visa">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -190,7 +190,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="bancoripley">
-                    <input type="radio" name="paymethod" id="bancoripley">
+                    <input type="radio" name="paymethod" id="bancoripley" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/bancoripley-payment-logo.png" alt="Banco Ripley">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -198,7 +198,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="cmr">
-                    <input type="radio" name="paymethod" id="cmr">
+                    <input type="radio" name="paymethod" id="cmr" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/cmr-payment-logo.png" alt="CMR">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -206,7 +206,7 @@
                 <!-- Payment item -->
                 <div>
                   <label for="hites">
-                    <input type="radio" name="paymethod" id="hites">
+                    <input type="radio" name="paymethod" id="hites" data-bs-toggle="modal" data-bs-target="#medioSeleccionado">
                     <img src="assets/images/hites-payment-logo.png" alt="Hites">
                     <span class="ff-paragraph">Total a pagar $10</span>
                   </label>
@@ -215,6 +215,72 @@
 
             </div>
 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="medioSeleccionado" tabindex="-1" aria-labelledby="medioSeleccionadoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content rounded-0">
+          <div class="modal-body">
+            <!-- Modal content -->
+            <div class="inner-page-section p-0">
+              <!-- Close button -->
+              <button class="button-close-modal" title="Cerrar" aria-label="Cerrar" type="button" data-bs-dismiss="modal"><i class="fa-solid fa-xmark fa-lg color-primary"></i></button>
+              <div class="container">
+                <div class="inner-page-wrapper p-0">
+                  <div class="bg-white py-5 px-3 py-md-5 px-md-4 p-lg-5">
+                    <div class="row">
+                      <div class="mb-5">
+                        <div class="ff-paragraph section-title-small mb-3 color-primary">Medio de pago seleccionado</div>
+                        <!-- Section paragraph -->
+                        <p class="ff-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy<br>
+                          nibh
+                          euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-lg-4 col-xl-2 text-center text-md-left">
+                        <img src="assets/images/webpay-payment-logo.png" alt="Webpay">
+                      </div>
+                      <div class="col-12 col-lg-8 col-xl-5">
+                        <!-- Payment review -->
+                        <div
+                          class="ot-order-review ff-paragraph d-flex flex-column gap-4 border-top border-bottom border-dark py-3 mt-2">
+                          <!-- Review item -->
+                          <div class="d-flex justify-content-between">
+                            <span>Total deuda</span>
+                            <span>$10</span>
+                          </div>
+                          <!-- Review item -->
+                          <div class="d-flex justify-content-between">
+                            <span>Medio seleccionado</span>
+                            <span>Webpay</span>
+                          </div>
+                          <!-- Review item -->
+                          <div class="d-flex justify-content-between">
+                            <span>Comisión por servicio</span>
+                            <span>$0</span>
+                          </div>
+                          <!-- Review item -->
+                          <div class="d-flex justify-content-between fw-bold">
+                            <span>Total a pagar</span>
+                            <span>$10</span>
+                          </div>
+                        </div>
+                        <!-- Action buttons -->
+                        <div class="d-flex flex-column flex-md-row justify-content-end gap-4 mt-5">
+                          <button type="submit" class="button button-secondary small">Cambiar medio de pago</button>
+                          <button type="submit" class="button button-primary small">Pagar ahora</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
