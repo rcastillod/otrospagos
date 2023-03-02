@@ -109,6 +109,13 @@ section {
   transform: translateY(-50%);
 }
 
+@media (min-width: 992px) {
+  .next,
+  .prev {
+    display: none;
+  }
+}
+
 .next {
   right: -50px;
   left: auto;
@@ -750,7 +757,7 @@ footer .footer-nav .nav-item::after {
     content: url("../images/close-shape.svg");
     top: -80px;
     left: -100px;
-    animation: rotatedelement 5s linear infinite;
+    animation: movedelement 7s linear infinite;
   }
   .about-grid > div:nth-child(3)::before {
     content: url("../images/circle-shape.svg");
