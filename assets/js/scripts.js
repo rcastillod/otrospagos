@@ -56,7 +56,7 @@ var swiper = new Swiper(".hero-slide", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 7500,
+    delay: 5000,
     disableOnInteraction: false,
   },
   effect: "fade",
