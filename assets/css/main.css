@@ -109,6 +109,11 @@ section {
   transform: translateY(-50%);
 }
 
+.next.swiper-button-disabled,
+.prev.swiper-button-disabled {
+  opacity: 0;
+}
+
 @media (min-width: 992px) {
   .next,
   .prev {
