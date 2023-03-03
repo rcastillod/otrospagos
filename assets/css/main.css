@@ -1190,7 +1190,7 @@ footer .footer-nav .nav-item::after {
   transition: 300ms ease-in-out;
 }
 
-.service-icon > img:last-of-type{
+.service-icon > img:last-of-type {
   opacity: 0;
   visibility: hidden;
 }
@@ -1216,7 +1216,6 @@ footer .footer-nav .nav-item::after {
     width: 5.625rem;
   }
 }
-
 .service-title {
   color: hsl(var(--primary-color));
   font-family: "omnessemibold";
