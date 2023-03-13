@@ -14,6 +14,7 @@ const sass = require('gulp-sass')(require('sass')); // For Compiling SASS files
 const postcss = require('gulp-postcss'); // For Compiling tailwind utilities with tailwind config
 const autoprefixer = require('autoprefixer'); // For parses the CSS and adds vendor prefixes
 const concat = require('gulp-concat'); // For Concatinating js,css files
+const uglify = require("gulp-terser"); // To Minify JS files
 const cleanCSS = require('gulp-clean-css');// To Minify CSS files
 const purgecss = require('gulp-purgecss');// Remove Unused CSS from Styles
 
@@ -91,21 +92,33 @@ function devClean() {
 
 //Production Tasks (Optimized Build for Live/Production Sites)
 function prodHTML() {
-  return src(`${options.paths.src.base}/**/*.html`).pipe(dest(options.paths.build.base));
+  return src(`${options.paths.src.base}/**/*.html`)
+    .pipe(dest(options.paths.build.base));
 }
 
 function prodStyles() {
   return src(`${options.paths.dist.css}/**/*`)
-    .pipe(purgecss({
-      content: ['src/**/*.{html,js}'],
-      defaultExtractor: content => {
-        const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
-        const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
-        return broadMatches.concat(innerMatches)
-      }
-    }))
+    .pipe(
+      purgecss({
+        content: ['src/**/*.{html,js}'],
+        defaultExtractor: content => {
+          const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []
+          const innerMatches = content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || []
+          return broadMatches.concat(innerMatches)
+        }
+      }))
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(dest(options.paths.build.css));
+}
+
+function prodScripts() {
+  return src([
+    `${options.paths.src.js}/libs/**/*.js`,
+    `${options.paths.src.js}/**/*.js`,
+  ])
+    .pipe(concat({ path: "scripts.js" }))
+    .pipe(uglify())
+    .pipe(dest(options.paths.build.js));
 }
 
 function prodClean() {
@@ -127,6 +140,6 @@ exports.default = series(
 
 exports.prod = series(
   prodClean, // Clean Build Folder
-  parallel(prodStyles, prodHTML), //Run All tasks in parallel
+  parallel(prodStyles, prodScripts, prodHTML), //Run All tasks in parallel
   buildFinish
 );
