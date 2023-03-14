@@ -1489,6 +1489,29 @@ footer .footer-nav .nav-item::after {
   margin-bottom: 0.625rem;
 }
 
+/* Payment method accordion */
+.accordion-methods > * {
+  border: none;
+  border-radius: 0 !important;
+}
+
+.accordion-methods .accordion-button {
+  color: hsl(var(--primary-color));
+  box-shadow: none;
+}
+
+.accordion-methods .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-left' width='32' height='32' viewBox='0 0 24 24' stroke-width='2' stroke='%236437C3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M15 6l-6 6l6 6'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.accordion-methods .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-x' width='32' height='32' viewBox='0 0 24 24' stroke-width='2' stroke='%236437C3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M18 6l-12 12'%3E%3C/path%3E%3Cpath d='M6 6l12 12'%3E%3C/path%3E%3C/svg%3E");
+}
+/* Preloader */
+
 .preloader {
   position: fixed;
   top: 0;

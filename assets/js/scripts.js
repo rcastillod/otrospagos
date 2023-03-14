@@ -148,11 +148,42 @@ document.addEventListener("click", (event) => {
 });
 
 /* ----------- Payment methods logo selected ----------- */
+// Accordion headings
+const accordionCollapseOne = document.getElementById('accordionCollapseOne')
+const accordionCollapseTwo = document.getElementById('accordionCollapseTwo')
+// Payment item
 const paymentMethodLabel = document.querySelectorAll('.payment-methods > div > label')
 const imgModal = document.querySelector('.img-medio-seleccionado')
+// Change payment
+const btnChangePayment = document.getElementById('cambiaPago')
+
+// Close heading one
+const collapseHeadingOne = () => {
+  document.querySelector('#methodHeadingOne > .accordion-button').classList.add('collapsed')
+  document.querySelector('#methodHeadingTwo > .accordion-button').classList.remove('collapsed')
+  accordionCollapseOne.classList.remove('show')
+  accordionCollapseTwo.classList.add('show')
+}
+
+// Close heading two
+const collapseHeadingTwo = () => {
+  document.querySelector('#methodHeadingOne > .accordion-button').classList.remove('collapsed')
+  document.querySelector('#methodHeadingTwo > .accordion-button').classList.add('collapsed')
+  accordionCollapseOne.classList.add('show')
+  accordionCollapseTwo.classList.remove('show')
+}
+
+// Select the image src and apply to selected method view
 paymentMethodLabel.forEach(label => {
   label.addEventListener('click', () => {
+
+    // Close heading one
+    collapseHeadingOne()
+
     let paymentImageSrc = label.firstElementChild.src
     imgModal.src = paymentImageSrc
   })
 });
+
+// Event to change the payment method
+btnChangePayment.addEventListener('click', collapseHeadingTwo)
