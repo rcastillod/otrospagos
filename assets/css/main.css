@@ -1361,6 +1361,11 @@ footer .footer-nav .nav-item::after {
   animation: loaderRotation 1s linear infinite;
 }
 
+.loader.small {
+  height: 50px;
+  width: 50px;
+}
+
 .loader-text {
   position: absolute;
   top: 50%;
@@ -1440,6 +1445,7 @@ footer .footer-nav .nav-item::after {
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   padding: 0;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -1489,6 +1495,29 @@ footer .footer-nav .nav-item::after {
   margin-bottom: 0.625rem;
 }
 
+.payment-methods .method-preloader {
+  background-color: hsl(var(--primary-color)/0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* Payment method accordion */
 .accordion-methods > * {
   border: none;
@@ -1510,8 +1539,8 @@ footer .footer-nav .nav-item::after {
 .accordion-methods .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-x' width='32' height='32' viewBox='0 0 24 24' stroke-width='2' stroke='%236437C3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M18 6l-12 12'%3E%3C/path%3E%3Cpath d='M6 6l12 12'%3E%3C/path%3E%3C/svg%3E");
 }
-/* Preloader */
 
+/* Preloader */
 .preloader {
   position: fixed;
   top: 0;

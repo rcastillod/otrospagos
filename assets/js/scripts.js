@@ -151,6 +151,11 @@ document.addEventListener("click", (event) => {
 // Accordion headings
 const accordionCollapseOne = document.getElementById('accordionCollapseOne')
 const accordionCollapseTwo = document.getElementById('accordionCollapseTwo')
+// Add bootstrap collapse method
+let collapseOne = new bootstrap.Collapse(accordionCollapseOne, { toggle: false })
+let collapseTwo = new bootstrap.Collapse(accordionCollapseTwo, { toggle: false })
+// Payment wrapper
+const paymentMethodWrapper = document.querySelector('.payment-methods')
 // Payment item
 const paymentMethodLabel = document.querySelectorAll('.payment-methods > div > label')
 const imgModal = document.querySelector('.img-medio-seleccionado')
@@ -159,18 +164,29 @@ const btnChangePayment = document.getElementById('cambiaPago')
 
 // Close heading one
 const collapseHeadingOne = () => {
-  document.querySelector('#methodHeadingOne > .accordion-button').classList.add('collapsed')
-  document.querySelector('#methodHeadingTwo > .accordion-button').classList.remove('collapsed')
-  accordionCollapseOne.classList.remove('show')
-  accordionCollapseTwo.classList.add('show')
+  createMethodPreloader()
+  setTimeout(() => {
+    collapseOne.hide()
+    collapseTwo.show()
+    destroyMethodPreloader()
+  }, 500);
 }
 
 // Close heading two
 const collapseHeadingTwo = () => {
-  document.querySelector('#methodHeadingOne > .accordion-button').classList.remove('collapsed')
-  document.querySelector('#methodHeadingTwo > .accordion-button').classList.add('collapsed')
-  accordionCollapseOne.classList.add('show')
-  accordionCollapseTwo.classList.remove('show')
+  collapseOne.show()
+  collapseTwo.hide()
+}
+
+// Preloader
+const createMethodPreloader = () => {
+  const preloaderWrapper = document.createElement('span')
+  preloaderWrapper.classList.add('method-preloader')
+  paymentMethodWrapper.appendChild(preloaderWrapper)
+}
+
+const destroyMethodPreloader = () => {
+  paymentMethodWrapper.removeChild(paymentMethodWrapper.lastElementChild)
 }
 
 // Select the image src and apply to selected method view
